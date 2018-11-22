@@ -1,0 +1,46 @@
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
+
+### NO MODIFICAR ###############################################################
+192.168.1.171	esther
+192.168.0.75	des					#Virtualizada en servidor
+192.168.0.75	des.spontania.com	#Para que funcione el antivirus no borre el downloader
+206.80.44.136	v3					#testv3.spontania.com
+127.0.0.1		ticket.localhost
+################################################################################
+#
+#
+#
+#
+################################################################################
+192.168.0.84	rpmbuild	#spontania rmp builder in 0.48
+192.168.1.179 	isobuild	#spontania iso builder in 0.48				#C:\Users\Esther\Documents\Virtual Machines\CentOS6.5-ISOS
+192.168.0.80	rpm 		#spontania Centos 6.5 to test rpms
+192.168.0.35	iso3.1		#spontania iso tester
+################################################################################
+#
+#
+#
+#
+################################################################################
+192.168.0.75	coke.testv3.spontania.com #Dev - Customization
+192.168.0.75	cocacola.des.spontania.com #Dev - Customization

@@ -1,0 +1,75 @@
+<%@ page import="java.io.*"%>
+<%@ page import="java.io.OutputStream"%>
+<%
+	String id = "";
+	String idHex = "";
+	String idHexFormated = "";
+
+	try {
+		id = request.getParameter("identifier");
+		idHex = Integer.toHexString(Integer.parseInt(id));
+		StringBuffer idHexSB = new StringBuffer("0000" + idHex);
+		idHexFormated = idHexSB.substring(idHexSB.length() - 4, idHexSB.length());
+
+	} catch (Exception e) {
+
+	}
+	String fileName = "TestSpontaniaLauncher.exe";
+	String path = "c:\\jbg\\conf\\eclipse\\workspace\\params\\WebContent\\download\\";
+	FileInputStream fileinputstream = null;
+	ServletOutputStream outSource = null;
+
+	response.setContentType("application/octet-stream");
+	response.setHeader("Content-Disposition", "attachment;filename=TestSpontaniaLauncher.exe");
+
+	try {
+		byte intBuf[] = new byte[4];
+		int iValue = Integer.parseInt(id);
+		intBuf[0] = (byte) (iValue & 0xFF);
+		intBuf[1] = (byte) ((iValue >> 8) & 0xFF);
+		intBuf[2] = (byte) ((iValue >> 16) & 0xFF);
+		intBuf[3] = (byte) ((iValue >> 24) & 0xFF);
+
+		fileinputstream = new FileInputStream(path + fileName);
+		outSource = response.getOutputStream();
+
+		int numberBytes = fileinputstream.available();
+		byte bytearray[] = new byte[numberBytes];
+
+		fileinputstream.read(bytearray);
+
+		for (int i = 0; i < numberBytes - 5; i++) {
+			outSource.write(bytearray[i]);
+		}
+
+		outSource.write(intBuf);
+
+	} catch (Exception e) {
+
+	} finally {
+		if (fileinputstream != null)
+			fileinputstream.close();
+		if (outSource != null) {
+			outSource.flush();
+			outSource.close();
+		}
+	}
+
+	/////////////////////////////////////////////////////////////////////////////// 
+
+	// 	File file = new File(path + fileName);
+	// 	FileInputStream fileIn = new FileInputStream(file);
+	// 	ServletOutputStream outSource = response.getOutputStream();
+
+	// 	response.setContentType("application/octet-stream");
+	// 	response.setHeader("Content-Disposition", "attachment;filename=TestSpontaniaLauncher.exe");
+
+	// 	byte[] outputByte = new byte[4096];
+	// 	//copy binary contect to output stream
+	// 	while (fileIn.read(outputByte, 0, 4096) != -1) {
+	// 		outSource.write(outputByte, 0, 4096);
+	// 	}
+	// 	fileIn.close();
+	// 	outSource.flush();
+	// 	outSource.close();
+%>

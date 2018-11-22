@@ -1,0 +1,221 @@
+Install:
+.- Copy in / to patch.nnn.zip
+.- Unpack patch.nnn.zip
+.- Execute patch.nnn.sh 
+.- Check error messages (patch.nnn.error)
+.- if necessary, to update the server configutarion (/etc/webconference-config.xml)
+.- Clear the browser cache!!!
+
+
+
+
+
+Patch Versions:
+14.5.20160125 (Replace 14.4)
+	
+	Tickets, bugs and issues fixes:
+	.- Bug - Modificado el valor de pragma-cache a 0 para no cachear las páginas.
+	.- Bug - Faltaba marcar como editables los parametros generales que lo son.
+	.- Bug - Modificado el valor de pragma-cache a 0 para que funcione.
+	.- Bug - El parametro general para indicar el dominio se llama CUSTOMIZATION_DOMAIN y no REDIRECTION.
+	.- Dev - El mensaje de bienvenida al dar de alta la entidad desde superadministracion ahora es similar al que se envia desde saas.
+	.- Dev - Customization - bug - not activate method
+	
+	
+	
+14.4.20160122 (Include 14.3)
+	Tickets, bugs and issues fixes:
+	.- Dev - Nuevo campo en parametros generales para indicar si se puede editar o no.
+	.- Bug - Solucionado problema por el que invitar desde el im a partir de las 19:00 siendo la duración de la sala 5 horas daba error creando sesion, al cambiar la fecha de fin de día es necesario indicar que la sesion es continua.
+	
+	
+	
+14.3 - 2016-01-20 (Include 14.2)
+	.-  Off development "Version Required".
+
+	
+	
+	
+14.2 - 2016-01-20 (Include 14.1)
+
+	Tickets, bugs and issues fixes:
+	.- Dev - Style changes screens to assist and arrange a meeting.
+
+	
+	
+	
+14.1 - 2016-01-19
+
+	Tickets, bugs and issues fixes:
+	.- Ticket 1737 - Collisions error message from the SpontaniaIM doesn't displayed the right collision time
+	.- Ticket 1771 - Not possible to create session from the administration site if I have created areas and moderators and later I remove.
+	.- Ticket 1810 - Not possible to modify default moderator created one I create a entity, because it said "moderator is already connected"
+	.- Ticket 1831 - With Windows10 browsers, SpontaniaDownloader is always downloaded.
+	.- Ticket 1834 - The IP redirects to '/portal' instead of '/spn''
+	.- Ticket 1837 - If the IP is configured by DHCP,the IP that the server displays when it is installed is different than the IP configured in the superadministration.
+	.- Bug - Dev - Version Required - 112.1 - Bug - do not upload
+	.- Bug 101 - Downloader add param --company
+	.- Dev 110 - Downloader Page
+	.- Bug - Removed some literals SPN screens and modified other context.
+	.- Bug - Changing the corporate orange white tab
+	.- Bug - Construction online url session invitation to include MeetingID
+	.- Bug - If the installation defined domain and subdomains these are used to construct the urls access sessions.
+	.- Bug - Include powered by Spontania
+	.- Bug - New resources in Chinese.
+	.- Bug - Spn context changes to customize the entity alias.
+	
+	
+	
+	
+14.0 - 2015/12/09
+	Tickets, bugs and issues fixes:
+	.- Bug - Meetings List service system breaks
+	.- Bug - InfoServicePort New version
+	.- Bug - In mac Spelling in password
+	.- Bug - Focus in Meetind ID
+	.- Bug - Spontania Downloader - Version of protocol
+	.- Bug - Not limit chars in login
+	.- Bug - ListMeetings service crash memory's java (tag: bugFileNotFoundException)
+	.- Bug - Missing parameters (tag: bugDownloader)
+	.- Bug - Downloader with Express version cannot be installed in Mac
+	.- Ticket 1535 - Sessions cannot be removed from the mini-administration (standard and enterprise).
+	.- Ticket 1536 - The speacial characters supported have changed with the new patches.
+	.- Ticket 1625 - In non permanent sessions, 'start date' and 'start hour' cannot be edited from the administration.
+	.- Ticket 1676 - The number of licenses does not change when the user updates a new license file. 
+	
+	Server
+	Version : 6.8.2.9
+	Date    : 2015-11-23
+			Fixed: ABM HQ was not working and no ABM qualities never were stoped. 
+			- Fixed: Users did not enter into low Quality. 
+			- Limiting the quality when too many users from same public IP.    <generalparameter id="max_users_from_same_ip_in_hq" value="5" />
+			- Limiting thread sending speed per different user public IP. 
+			- Improved the cpu ussage of the network functions.
+			- Limiting the bandwidth grouping by the two first ip numbers.
+			- Added the configuration of the sending limits with the .xml. 
+					<generalparameter id="udp_time_to_sleep_microseconds" value="500" />
+					<generalparameter id="udp_packets_to_send_per_step" value="2" />
+			
+			- Enabled modifying the maximun udp packet data size.  ( At the moment it does not work with ABM or session recording )
+					<generalparameter id="max_udp_packet_data_size" value="1336" />
+			- Fixed: Crashing in the packet reception with user removed.
+			- Similar to 6.8.2.8.beta3.
+					- Check if there is any user with whiteboard before giving SHARING permision to any user.	
+			- Fixed: do not resend twice in Multicast.
+			- Added some traces (stats and session).
+			- Modified traces to use session ID instead of COMPANY/AREA/SESSION
+			- Modified SessionsList to get the session names in a std::list instead of an array. 
+			- Fixed: AVQ limits were not using until some users entered into low quality.​
+	
+	
+13.2-Standalone
+	.- Bug - Not limit chars in login
+	.- Ticket 1535 - Sessions cannot be removed from the mini-administration (standard and enterprise). 
+	.- Ticket 1536 - The speacial characters supported have changed with the new patches.
+	
+	
+	
+	
+	
+13.0 
+	Tickets, bugs and issues fixes:
+	.- Bug - Meetings List service system breaks
+	.- Bug - InfoServicePort New version
+	
+	
+	
+	
+	
+12.0 - 2015-11-10
+	Tickets, bugs and issues fixes:
+	.- Bug - Updated Spontania versions in Table soft versions for proper operation of the "superadmin"
+
+	
+	
+	
+11.4 - 2015-11-13	
+	Developments:
+	.- Spontania Downloader - Not including service web SpontaniaParameterExchangerService
+	.- Spontania Version Required - Not active
+
+	Tickets, bugs and issues fixes:
+	.- Update Mail template.
+	.- Ticket 1600 - 'Error creating conexion' when a user starts a meeting from the SpontaniaIM chat window.
+	
+	
+	
+	
+	
+	
+10.1
+	Developments:
+	.- Spontania Downloader - Not including service web SpontaniaParameterExchangerService
+		
+	Tickets, bugs and issues fixes:
+	.- Ticket 1594 - From /organize.jsp in Chrome, Spontania client is downloaded automatically
+	.- Updating texts in order that the text is best
+
+	
+	
+	
+	
+9.0
+	Tickets, bugs and issues fixes:
+	.- Bug,  java.lang.NullPointerException (DB without connection free)
+	.- Ticket 1597 - When the moderator invites a user from Spontania to the meeting and the user accepts, the user cannot connect. An error is received: 'The client versión is not defined in the entity’
+	.- Ticket 1611 - MAC users cannot connect to a meeting from 'attend'
+	.- Ticket 1623 - The IP http://<IP_serer> redirects to http://<IP_server>
+	.- Ticket 1594 - From /organize.jsp in Chrome, Spontania client is downloaded automatically
+	
+	
+	
+8.3 
+	Solution to the following tickets, bugs and issues:
+	.- Ticket 1536 - The speacial characters supported have changed with the new patches. 
+	.- Bug, General Information old
+	.- Bug, Doc Dialcom
+	.- Bug, Not UIM
+	.- Bug, Mac client does not connect
+	.- Bug, http://<<ip_server>> go to http://des/spn/attend.jsp
+	.- Ticket 1536 - The speacial characters supported have changed with the new patches
+	.- Ticket 1294 - The sessions edited from the administration shouldn't admit password with less than 8 characters.
+	
+	Server
+	Version : 6.8.2.5
+	Date    : 2015-10-08
+			- Fixed: do not resend twice in Multicast.
+			- Added some traces (stats and session).
+			- Modified traces to use session ID instead of COMPANY/AREA/SESSION
+			- Modified SessionsList to get the session names in a std::list instead of an array. 
+			- Fixed: AVQ limits were not using until some users entered into low quality.​
+	
+	
+7.0 
+	Solution to the following tickets, bugs and issues:
+	.- Ticket 571 - Error messages show Dialcom logo in the web
+	.- Ticket 572 - Standard mini administration - you can select 'delete' without selecting any session.
+	.- Ticket 638 - When an entity is created - better to use the name and surname.
+	.- Bug, not write in log
+	.- Bug, not connect in Mac, if user not UIM
+	
+6.2
+	Remake of:
+		video_bandwidths
+		video_fps
+		video_resolutions
+		video_qualities
+
+	Server:
+	.- Webconferencebase 8.1.18
+	.- Change webconference-config.xml
+		<generalparameter id="max_video_area_per_session" value="2000000" />
+		
+	Solution to the following tickets and issues:
+	.- User exists in entity
+	.- Gateway licenses are not created.
+	.- 1471 - When a classroom entity is created, the sessions are not created.
+	.- Entidades ya creadas antes del parche con cero licencias de Gateway, no se editan correctamente si les añadimos expansión de Gateway. 
+
+		
+	
+	

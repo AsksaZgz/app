@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="42px" height="42px" viewBox="0 0 42 42" enable-background="new 0 0 42 42" xml:space="preserve">
+<g>
+	<g>
+		<defs>
+			<circle id="SVGID_1_" cx="21" cy="21" r="21"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		
+			<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="0.9766" y1="43.5234" x2="1.9766" y2="43.5234" gradientTransform="matrix(43 0 0 -43 -42.5 1892.5)">
+			<stop  offset="0" style="stop-color:#EF8300"/>
+			<stop  offset="0.2258" style="stop-color:#F08A00"/>
+			<stop  offset="0.5489" style="stop-color:#F49D00"/>
+			<stop  offset="0.9291" style="stop-color:#FBBB00"/>
+			<stop  offset="1" style="stop-color:#FCC200"/>
+		</linearGradient>
+		<rect clip-path="url(#SVGID_2_)" fill="url(#SVGID_3_)" width="42" height="42"/>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_4_" width="42" height="42"/>
+		</defs>
+		<clipPath id="SVGID_5_">
+			<use xlink:href="#SVGID_4_"  overflow="visible"/>
+		</clipPath>
+		<path clip-path="url(#SVGID_5_)" fill="#FFFFFF" d="M14.62,29.605h12.763l0.256-3.785c0.055-0.778-0.664-2.004-1.641-2.362
+			c-3.203-1.147-6.783-1.151-10.002,0.001c-0.964,0.357-1.687,1.585-1.635,2.361L14.62,29.605z M28.316,31.605H13.686
+			c-0.524,0-0.961-0.407-0.998-0.931l-0.321-4.72c-0.116-1.738,1.232-3.741,2.945-4.374c3.675-1.317,7.714-1.312,11.37-0.003
+			c1.727,0.635,3.076,2.639,2.953,4.38l-0.32,4.715C29.279,31.198,28.844,31.605,28.316,31.605"/>
+		<path clip-path="url(#SVGID_5_)" fill="#FFFFFF" d="M21,19.013c-2.767,0-5.018-2.251-5.018-5.018S18.233,8.977,21,8.977
+			s5.018,2.251,5.018,5.018S23.767,19.013,21,19.013z M21,10.977c-1.664,0-3.018,1.354-3.018,3.018s1.354,3.018,3.018,3.018
+			s3.018-1.354,3.018-3.018S22.664,10.977,21,10.977z"/>
+	</g>
+</g>
+</svg>
+

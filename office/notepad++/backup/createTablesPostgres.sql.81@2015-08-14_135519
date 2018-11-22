@@ -1,0 +1,1230 @@
+CREATE TABLE ADMIN (
+  ID SERIAL UNIQUE NOT NULL,
+  LOGIN VARCHAR(15) NOT NULL DEFAULT '',
+  PASSWORD VARCHAR(64) NOT NULL DEFAULT '',
+  PARTNER VARCHAR(100) NOT NULL DEFAULT '',
+  ID_INBOUND_CALL INTEGER NOT NULL DEFAULT '0',
+  LANGUAGE VARCHAR(8) NOT NULL DEFAULT 'en_US',
+  PRIMARY KEY(LOGIN, PASSWORD)) ;
+
+CREATE TABLE adminBackup (
+  ID INTEGER NOT NULL,
+  LOGIN VARCHAR(15) NOT NULL DEFAULT '',
+  PASSWORD VARCHAR(64) NOT NULL DEFAULT '',
+  PARTNER VARCHAR(100) NOT NULL DEFAULT '',
+  ID_INBOUND_CALL INTEGER NOT NULL DEFAULT '0',
+  LANGUAGE VARCHAR(8) NOT NULL DEFAULT 'en_US',
+  PRIMARY KEY(ID)) ;
+  
+CREATE TABLE entidad (
+  id serial NOT NULL,
+  razon_social varchar(100) NOT NULL default '',
+  nombre_conexion varchar(100) NOT NULL default '',
+  fecha_alta date default NULL,
+  cif varchar(20) default '',
+  contacto varchar(75) NOT NULL default '',
+  email varchar(80) default '',
+  login varchar(100) NOT NULL default '',
+  password varchar(64)  NOT NULL default '',
+  numero_licencias int NOT NULL default '0',
+  tipo_licencia smallint NOT NULL default '1',
+  crc varchar(13)  NOT NULL default '',
+  fichero_configuracion varchar(255) NOT NULL default '',
+  idioma smallint NOT NULL default '1',
+  hijo_de int NOT NULL default '0',
+  servicios_activos varchar(16) NOT NULL default '0000000000000000',
+  graba_sesion smallint NOT NULL default '0',
+  config_servicios varchar(64) NOT NULL default '000000000000000000000000000000000000000000000000000000000000000',
+  config_servicios_global varchar(64) NOT NULL default '000000000000000000000000000000000000000000000000000000000000000',
+  pda char(3) NOT NULL default '000',
+  administracion_web char NOT NULL default 'N',
+  h323 smallint NOT NULL default '0',
+  sip smallint NOT NULL default '0',
+  movil char(3) NOT NULL default '000',
+  multicast smallint NOT NULL default '0',
+  im smallint  NOT NULL default '0',
+  mostrar_agente smallint NOT NULL default '0',
+  outlook smallint NOT NULL default '0',
+  abm smallint NOT NULL default '0',
+  numero_licencias_webcontrol int NOT NULL default '0',
+  otros_servidores smallint NOT NULL default '0',
+  tresg smallint NOT NULL default '0',
+  numero_licencias_im int NOT NULL default '0',
+  msg_wctrl text,
+  win smallint NOT NULL default '0',
+  lcs_bridge smallint NOT NULL default '0',
+  ocs_bridge smallint NOT NULL default '0',
+  cliente_web char(3) NOT NULL default '000',
+  espacio_disco int NOT NULL default '0',
+  mac smallint NOT NULL default '0',
+  polls smallint NOT NULL default '0',
+  outlook_im smallint NOT NULL default '0',
+  uim_server_id smallint default '0',
+  activo smallint default '1',
+  id_partner int NOT NULL default '1' REFERENCES admin(id) ON DELETE CASCADE,
+  language VARCHAR(8) NOT NULL DEFAULT 'en_US',
+  numero_licencias_gateway int not NULL default '0',
+  PRIMARY KEY  (id)
+) ;
+
+CREATE TABLE usuario (
+  id serial UNIQUE NOT NULL,
+  nombre varchar(75) NOT NULL default '',
+  email varchar(75) NOT NULL default '',
+  fecha_alta varchar(10) default NULL,
+  login varchar(20) NOT NULL default '',
+  password varchar(20) NOT NULL default '',
+  id_entidad int NOT NULL default '0' REFERENCES entidad(id) ON DELETE CASCADE,
+  idioma smallint default NULL,
+  frase_passwd varchar(255) default '',
+  puede_moderar smallint NOT NULL default '0',
+  respuesta_passwd varchar(100) default NULL,
+  rol_gestor smallint NOT NULL default '0',
+  traductor smallint NOT NULL default '0',
+  tipo smallint NOT NULL default '0',
+  support smallint NOT NULL default '0',
+  PRIMARY KEY  (id,id_entidad)
+) ;
+
+CREATE TABLE area (
+  id serial NOT NULL,
+  nombre varchar(50) NOT NULL default '',
+  id_entidad int NOT NULL default '0' REFERENCES entidad(id) ON DELETE CASCADE,
+  fecha_alta varchar(19) default '0000-00-00 00:00:00',
+  login varchar(10) NOT NULL default '',
+  password varchar(32) NOT NULL default '',
+  servicios_activos varchar(16) NOT NULL default '0000000000000000',
+  id_servidor smallint NOT NULL default '0',
+  fichero_configuracion varchar(70) default '',
+  idioma smallint NOT NULL default '1',
+  hijo_de int  NOT NULL default '0',
+  email varchar(50) NOT NULL default '',
+  responsable varchar(70) NOT NULL default '',
+  numero_licencias int  NOT NULL default '0',
+  administracion_web char NOT NULL default 'N',
+  tipo smallint NOT NULL default 0,
+  config_servicios_global varchar(64) NOT NULL default '000000000000000000000000000000000000000000000000000000000000000',
+  config_servicios varchar(64) NOT NULL default '000000000000000000000000000000000000000000000000000000000000000',
+  id_llamada_entrante int  NOT NULL default '0',
+  codigo_dtmf int default '0',
+  graba_sesion smallint NOT NULL default 0,
+  nombre_saas varchar(50),
+  PRIMARY KEY  (id)
+);
+
+CREATE TABLE sesion (
+  id serial NOT NULL,
+  nombre varchar(100) NOT NULL default '',
+  config_servicios varchar(64) NOT NULL default '000000000000000000000000000000000000000000000000000000000000000',
+  necesita_registro char NOT NULL default 'N',
+  inicia_usuario char NOT NULL default 'N',
+  caduca char NOT NULL default 'N',
+  aviso_mail char NOT NULL default 'N',
+  id_entidad int NOT NULL default '0' REFERENCES entidad(id) ON DELETE CASCADE,
+  id_area int NOT NULL default '0' REFERENCES area(id) ON DELETE CASCADE,
+  url_registro varchar(150) default '',
+  grupo_usuarios int NOT NULL default '0',
+  servicios_activos varchar(16) NOT NULL default '0000000000000000',
+  fecha_inicio varchar(10) NOT NULL default '0000-00-00',
+  fecha_final varchar(10) NOT NULL default '0000-00-00',
+  hora_inicio varchar(8) NOT NULL default '00:00:00',
+  hora_final varchar(8) NOT NULL default '00:00:00',
+  minutos_preconexion varchar(2) NOT NULL default '00',
+  permitir_inscripcion char NOT NULL default 'S',
+  id_moderador int NOT NULL default '0',
+  password varchar(15)  NOT NULL default '',
+  login varchar(10) NOT NULL default '',
+  activa smallint NOT NULL default '1',
+  operador char NOT NULL default 'A',
+  maximo_usuarios int NOT NULL default '0',
+  descripcion varchar(255) NOT NULL default '',
+  graba_sesion smallint NOT NULL default '0',
+  tipo_sesion smallint NOT NULL default '0',
+  config_servicios_global varchar(64) NOT NULL default '000000000000000000000000000000000000000000000000000000000000000',
+  estado char NOT NULL default '',
+  otros_servidores smallint NOT NULL default '0',
+  id_llamada_entrante int NOT NULL default '0',
+  codigo_dtmf int default NULL,
+  graba_sesion_cliente smallint NOT NULL default '0',
+  invita_usuarios smallint NOT NULL default '0',
+  periodicidad varchar(3),
+  nombre_saas varchar(50),
+  PRIMARY KEY  (id)
+) ;
+
+
+CREATE TABLE area_abm (
+  id_area int NOT NULL default '0' REFERENCES area(id) ON DELETE CASCADE,
+  id_stream smallint NOT NULL default '0',
+  kbps smallint NOT NULL default '0',
+  fps smallint NOT NULL default '0',
+  keyframe smallint NOT NULL default '0',
+  pc smallint NOT NULL default '0',
+  pda smallint NOT NULL default '0',
+  mobile smallint NOT NULL default '0',
+  PRIMARY KEY  (id_area,id_stream)
+) ;
+
+CREATE TABLE area_moderador (
+  id_area int NOT NULL default '0',
+  id_moderador int NOT NULL default '0' REFERENCES usuario(id) ON DELETE CASCADE,
+  PRIMARY KEY  (id_area,id_moderador)
+) ;
+
+CREATE TABLE area_traductor (
+  id_area int NOT NULL default '0' REFERENCES area(id) ON DELETE CASCADE,
+  id_traductor int NOT NULL default '0' REFERENCES usuario(id) ON DELETE CASCADE,
+  PRIMARY KEY  (id_area,id_traductor)
+) ;
+
+
+CREATE TABLE backups (
+  id serial  NOT NULL,
+  name varchar(50) NOT NULL default '',
+  registrationDate varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  periodicity char NOT NULL default 'N',
+  type smallint NOT NULL default '0',
+  startHour varchar(8) NOT NULL default '00:00:00',
+  lastBackupDate varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (id)
+) ;
+
+CREATE TABLE bal_balancer (
+  pk_bal_key varchar(255),
+  bal_value varchar (255),
+  bal_time bigint,
+  PRIMARY KEY  (pk_bal_key)
+) ;
+
+CREATE TABLE cac_cache (
+  pk_cac_key varchar(255),
+  cac_value varchar (255),
+  PRIMARY KEY (pk_cac_key)
+) ;
+
+CREATE TABLE cdr (
+  id serial NOT NULL,
+  id_sesion int NOT NULL default '0',
+  fecha_inicio varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  fecha_final varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  id_entidad int NOT NULL default '0',
+  tipo_sesion char NOT NULL default 'N',
+  graba_sesion smallint NOT NULL default '0',
+  password varchar(15)  NOT NULL default '',
+  tipo_servicio smallint NOT NULL default '0',
+  id_servidor int NOT NULL default '0',
+  ip_servidor varchar(15) NOT NULL default '',
+  conversion smallint NOT NULL default '0',
+  email varchar(75) NOT NULL default '',
+  version varchar(100) NOT NULL default '0',
+  PRIMARY KEY  (id)
+) ;
+
+CREATE TABLE cdr_historico (
+  id serial NOT NULL,
+  id_sesion int NOT NULL default '0',
+  fecha_inicio varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  fecha_final varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  id_entidad int NOT NULL default '0',
+  tipo_sesion char NOT NULL default 'N',
+  graba_sesion smallint NOT NULL default '0',
+  password varchar(15)  NOT NULL default '',
+  tipo_servicio smallint NOT NULL default '0',
+  id_servidor int NOT NULL default '0',
+  ip_servidor varchar(15) NOT NULL default '',
+  conversion smallint NOT NULL default '0',
+  email varchar(75) NOT NULL default '',
+  version varchar(100) NOT NULL default '0',
+  PRIMARY KEY  (id)
+) ;
+
+
+CREATE TABLE cdr_h323_sip (
+  id serial NOT NULL,
+  id_cdr int NOT NULL default '0',
+  start_time varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  end_time varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  originating_number varchar(13) NOT NULL default '',
+  destination_number varchar(13) NOT NULL default '',
+  id_session int NOT NULL default '0',
+  id_area int NOT NULL default '0',
+  id_entity int NOT NULL default '0',
+  type smallint NOT NULL default '0',
+  outbound_status char default NULL,
+  h323_sip_status int NOT NULL default '0',
+  webconference_status int NOT NULL default '0',
+  id_log varchar(13) NOT NULL default '',
+  PRIMARY KEY  (id)
+) ;
+
+
+CREATE TABLE concurrence (
+    id_entity integer DEFAULT 0 NOT NULL,
+    date character varying(10) DEFAULT '0000-00-00'::character varying NOT NULL,
+    initial_date character varying(19) DEFAULT '0000-00-00 00:00:00'::character varying NOT NULL,
+    final_date character varying(19) DEFAULT '0000-00-00 00:00:00'::character varying NOT NULL,
+    users integer DEFAULT 0 NOT NULL,
+    sessions integer DEFAULT 0 NOT NULL,
+    type smallint DEFAULT 0 NOT NULL
+);
+
+CREATE TABLE conexion (
+  id serial NOT NULL,
+  id_sesion int NOT NULL default '0',
+  username varchar(50) NOT NULL default '',
+  datos_conexion text,
+  fecha varchar(19),
+  tipo_sesion char NOT NULL default 'U',
+  tipo_conexion char default NULL,
+  datos_cliente text NOT NULL,
+  tipo_servicio smallint NOT NULL default '0',
+  datos_webcontrol text ,
+  datos_webconference text ,
+  info text ,
+  serverid int,
+  PRIMARY KEY  (id)
+) ;
+
+CREATE TABLE conexion_historico (
+  id int NOT NULL,
+  id_sesion int NOT NULL default '0',
+  username varchar(50) NOT NULL default '',
+  datos_conexion text,
+  fecha varchar(19),
+  tipo_sesion char NOT NULL default 'U',
+  tipo_conexion char default NULL,
+  datos_cliente text NOT NULL,
+  tipo_servicio smallint NOT NULL default '0',
+  datos_webcontrol text ,
+  datos_webconference text ,
+  info text ,
+  serverid int,
+  PRIMARY KEY  (id)
+) ;
+
+CREATE TABLE conexion_crm (
+  id_conexion int NOT NULL default '0',
+  id_crm varchar(75) NOT NULL default '0',
+  PRIMARY KEY  (id_conexion, id_crm)
+) ;
+
+CREATE TABLE configuration_services (
+  id_service smallint NOT NULL default '0',
+  name varchar(255) NOT NULL default '',
+  value varchar(255) NOT NULL default '',
+  visible char NOT NULL default '0',
+  modifiable char NOT NULL default '0'
+);
+  
+
+CREATE TABLE data_call (
+  id_usuario varchar(16) NOT NULL default '',
+  ip varchar(16) NOT NULL default '',
+  destino varchar(120) default NULL,
+  id_sesion int NOT NULL default '0',
+  call_time_stamp varchar(19)
+) ;
+
+
+
+
+CREATE TABLE entidad_abm (
+  id_entidad int NOT NULL default '0',
+  id_stream smallint NOT NULL default '0',
+  kbps smallint NOT NULL default '0',
+  fps smallint NOT NULL default '0',
+  keyframe smallint NOT NULL default '0',
+  pc smallint NOT NULL default '0',
+  pda smallint NOT NULL default '0',
+  mobile smallint NOT NULL default '0',
+  PRIMARY KEY  (id_entidad,id_stream)
+) ;
+
+CREATE TABLE entity_history (
+  id serial NOT NULL,
+  id_entity int NOT NULL default '0',
+  connection_name varchar(100) NOT NULL DEFAULT '',
+  company_name  varchar(100) NOT NULL DEFAULT '',
+  spontania_licenses int NOT NULL DEFAULT '0',
+  im_licenses int NOT NULL DEFAULT '0',
+  webcontrol_licenses int NOT NULL DEFAULT '0',
+  change_date varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  operation varchar(5) NOT NULL DEFAULT '',
+  id_partner int NOT NULL default '1',
+  gateway_licenses int NOT NULL DEFAULT '0'
+) ;
+
+CREATE TABLE entity_history_packets (
+  id_entity_history int NOT NULL default '0',
+  packet_name varchar(50) NOT NULL default '',
+  packets_number int NOT NULL default '0',
+  PRIMARY KEY (id_entity_history, packet_name)
+) ;
+
+CREATE TABLE entity_packets (
+  id_entity int NOT NULL default '0',
+  packet_name varchar(50) NOT NULL default '',
+  packets_number int NOT NULL default '0',
+  PRIMARY KEY (id_entity, packet_name)
+) ;
+
+CREATE TABLE entidad_p2p (
+  id_entidad int NOT NULL default '0' REFERENCES entidad(id) ON DELETE CASCADE,
+  ip_servidor1 varchar(21) NOT NULL default '',
+  ip_servidor2 varchar(21) NOT NULL default '',
+  ip_proxy_tcp varchar(21) NOT NULL default '',
+  ip_test_nat varchar(21) NOT NULL default '',
+  ip_proxy_udp varchar(21) NOT NULL default '',
+  PRIMARY KEY  (id_entidad)
+) ;
+
+CREATE TABLE entidad_satelite (
+  id serial NOT NULL,
+  id_entidad int NOT NULL default '0' REFERENCES entidad(id) ON DELETE CASCADE,
+  ip varchar(25) NOT NULL default '',
+  nombre varchar(70) NOT NULL default '',
+  shortname varchar(5) NOT NULL default '',
+  PRIMARY KEY  (id)
+) ;
+
+CREATE TABLE grupo (
+  id serial NOT NULL,
+  nombre varchar(100) NOT NULL default '',
+  id_area int NOT NULL default '0' REFERENCES area(id) ON DELETE CASCADE,
+  id_entidad int NOT NULL default '0' REFERENCES entidad(id) ON DELETE CASCADE,
+  tipo int NOT NULL default '0',
+  PRIMARY KEY  (id)
+) ;
+
+
+CREATE TABLE grupo_usuarios (
+  id_grupo int NOT NULL default '0' REFERENCES grupo(id) ON DELETE CASCADE,
+  id_usuario int NOT NULL default '0',
+  tipo smallint NOT NULL default '1',
+  PRIMARY KEY  (id_grupo,id_usuario,tipo)
+) ;
+
+
+
+CREATE TABLE historico_cdr (
+  id_entidad int NOT NULL default '0',
+  area varchar(75) NOT NULL default '',
+  sesion varchar(75) NOT NULL default '',
+  usuario varchar(75) NOT NULL default '',
+  rol char NOT NULL default 'U',
+  inicio_conexion varchar(19) default NULL,
+  final_conexion varchar(19) default NULL,
+  graba smallint NOT NULL default '0',
+  servicios_utilizados varchar(64) NOT NULL default '0000000000000000000000000000000000000000000000000000000000000000',
+  tipo_servicio smallint NOT NULL default '0',
+  id_conexion int NOT NULL default '0',
+  id_sesion int NOT NULL default '0',
+  id_cdr int NOT NULL default '0',
+  version varchar(100) NOT NULL default '0'
+) ;
+
+
+
+CREATE TABLE idioma (
+  id serial NOT NULL,
+  nombre varchar(30) NOT NULL default '',
+  lenguaje varchar(2) NOT NULL default '',
+  pais varchar(2) NOT NULL default '',
+  variante CHARACTER VARYING(2) NOT NULL DEFAULT '',
+  PRIMARY KEY  (lenguaje, pais, variante)
+) ;
+
+
+
+
+CREATE TABLE idiomas_traduccion (
+  id serial NOT NULL ,
+  nombre varchar(100) NOT NULL default '',
+  abreviado varchar(10) NOT NULL default '',
+  id_entidad int default '0' REFERENCES entidad(id) ON DELETE CASCADE,
+  PRIMARY KEY  (id)
+) ;
+
+
+CREATE TABLE licenses (
+  webconference_max int NOT NULL default '0',
+  webconference int NOT NULL default '0',
+  webconference_excess int NOT NULL default '0',
+  webcontrol_max int NOT NULL default '0',
+  webcontrol int NOT NULL default '0',
+  webcontrol_excess int NOT NULL default '0',
+  im_max int NOT NULL default '0',
+  im int NOT NULL default '0',
+  im_excess int NOT NULL default '0',
+  excess smallint NOT NULL default '0',
+  gateway_max int NOT NULL default '0',
+  gateway int NOT NULL default '0',
+  gateway_excess int NOT NULL default '0'
+) ;
+
+
+CREATE TABLE llamada_entrante (
+  id serial NOT NULL,
+  tipo smallint NOT NULL default '98',
+  id_entidad int NOT NULL default '0',
+  telefono varchar(40) default '',
+  PRIMARY KEY  (id)
+) ;
+
+CREATE TABLE incoming_call_info
+(
+	id_incoming_call integer not null REFERENCES llamada_entrante(id) ON DELETE CASCADE,
+	ip varchar(15) NOT NULL default '',
+	phone varchar(15) NOT NULL default '',
+	PRIMARY KEY(id_incoming_call, ip, phone),
+	FOREIGN KEY(id_incoming_call) REFERENCES llamada_entrante(id)
+);
+
+
+CREATE TABLE moderator_in_session (
+  id_session int NOT NULL default '0' REFERENCES sesion(id) ON DELETE CASCADE,
+  id_connection int NOT NULL default '0',
+  PRIMARY KEY  (id_session)
+) ;
+
+
+
+CREATE TABLE moderator_ldap (
+  id_session int NOT NULL default '0' REFERENCES sesion(id) ON DELETE CASCADE,
+  login varchar(255) NOT NULL default '',
+  PRIMARY KEY  (id_session,login)
+) ;
+
+
+
+CREATE TABLE outboundcall (
+  id serial NOT NULL,
+  start_time varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  originating_number varchar(13) NOT NULL default '',
+  destination_number varchar(50) NOT NULL default '',
+  state int NOT NULL default '1',
+  id_session int NOT NULL default '0' REFERENCES sesion(id) ON DELETE CASCADE,
+  id_server int NOT NULL default '0',
+  id_connection int NOT NULL default '0',
+  id_platform int NOT NULL default '0',
+  access_pin varchar(10) NOT NULL default '',
+  PRIMARY KEY  (id)
+) ;
+
+CREATE TABLE packets (
+  id serial unique NOT NULL,
+  name varchar(50) NOT NULL default '',
+  description text NOT NULL default '',
+  spontania_configuration varchar(64) NOT NULL default '0050000103030011105120               000000000000000000000000000',
+  spontania_services varchar(16) NOT NULL default '2211111110000000',
+  webcontrol_configuration varchar(64) NOT NULL default '1070702101030301199990               000000000000000000000000000',
+  webcontrol_services varchar(16) NOT NULL default '1111111110000000',
+  spontania_licenses int NOT NULL DEFAULT '0',
+  im_licenses int NOT NULL DEFAULT '0',
+  webcontrol_licenses int NOT NULL DEFAULT '0',
+  sessions int NOT NULL DEFAULT '0',
+  agents int NOT NULL DEFAULT '0',
+  speakers int NOT NULL DEFAULT '0',
+  promotion varchar(50) NOT NULL DEFAULT '',
+  type varchar(2) NOT NULL DEFAULT 'N', 
+  gateway_licenses int NOT NULL DEFAULT '0',
+  PRIMARY KEY (name)
+) ;
+
+
+CREATE TABLE parametros_generales (
+  id_entidad int NOT NULL default '0',
+  nombre varchar(50) NOT NULL default '',
+  valor text NOT NULL default '',
+  descripcion varchar(100) NOT NULL default '',
+  mostrar smallint NOT NULL default '0',
+  permitir_entidad smallint NOT NULL default '1',
+  PRIMARY KEY  (id_entidad,nombre)
+) ;
+
+CREATE TABLE partner_configuration (
+  id_partner int NOT NULL default '0',
+  name varchar(50) NOT NULL default '',
+  value text NOT NULL default '',
+  description varchar(100) NOT NULL default '',
+  shown smallint NOT NULL default '0',
+  customized smallint NOT NULL default '1',
+  PRIMARY KEY  (id_partner,name)
+) ;
+
+CREATE TABLE partner_packets (
+  id_partner int NOT NULL default '0',
+  packet_name varchar(50) NOT NULL default '',
+  PRIMARY KEY  (id_partner,packet_name)
+) ;
+
+CREATE TABLE partner_versions (
+  id_partner int NOT NULL default '0',
+  id_platform int NOT NULL default '0',
+  version int NOT NULL default '0',
+  filename varchar(100) NOT NULL default '',
+  ordershow smallint NOT NULL DEFAULT 0,
+  arch smallint NOT NULL DEFAULT 0,
+  extension varchar(30),
+  literal varchar(100),
+  information smallint NOT NULL DEFAULT 0,
+  updater smallint NOT NULL DEFAULT 0,
+  PRIMARY KEY  (id_partner,id_platform)
+) ;
+
+CREATE TABLE phone_country (
+  id_call int NOT NULL default '0',
+  phone varchar(40) NOT NULL default '',
+  country varchar(40) NOT NULL default '',
+  PRIMARY KEY  (id_call, phone, country)
+) ; 
+
+CREATE TABLE pol_polls (
+	pk_pol_poll_id serial NOT NULL,
+	fk_pol_ent_entity_id integer DEFAULT 0 NOT NULL REFERENCES entidad(id) ON DELETE CASCADE,
+  pol_user_id character varying(255) DEFAULT ''::character varying NOT NULL,
+  pol_poll_name character varying(255) DEFAULT ''::character varying NOT NULL,
+  pol_poll_description text NOT NULL,
+  pol_all_entity integer DEFAULT 0 NOT NULL,
+  pol_logo character varying(255) DEFAULT ''::character varying NOT NULL,
+  PRIMARY KEY  (pk_pol_poll_id)
+);
+
+CREATE TABLE polans_polls_answers (
+    pk_polans_answer_id serial NOT NULL,
+    fk_polans_pol_poll_id integer DEFAULT 0 NOT NULL REFERENCES pol_polls(pk_pol_poll_id) ON DELETE CASCADE,
+    polans_user_name character varying(255) DEFAULT ''::character varying NOT NULL,
+    fk_polans_cdr_cdr_id integer DEFAULT 0 NOT NULL,
+    polans_poll_answer text NOT NULL,
+    polans_date character varying(128) DEFAULT ''::character varying NOT NULL
+);
+
+CREATE TABLE polare_polls_areas (
+    fk_polare_pol_poll_id integer DEFAULT 0 NOT NULL,
+    fk_polare_are_area_id integer DEFAULT 0 NOT NULL
+);
+
+CREATE TABLE polkey_polls_keys (
+    pk_polkey_key_id serial NOT NULL,
+    fk_polkey_pol_poll_id integer DEFAULT 0,
+    fk_polkey_cdr_cdr_id integer DEFAULT 0,
+	polkey_user_id character varying(255) DEFAULT ''::character varying,
+    polkey_key character varying(128) DEFAULT ''::character varying NOT NULL,
+    polkey_date character varying(128) DEFAULT ''::character varying NOT NULL
+);
+
+CREATE TABLE redirection_group (
+  id_entity int NOT NULL default '0' REFERENCES entidad(id) ON DELETE CASCADE,
+  id_group_source int NOT NULL default '0',
+  id_group_destination int NOT NULL default '0',
+  order_group int NOT NULL default '0',
+  PRIMARY KEY  (id_entity,id_group_source,id_group_destination)
+) ;
+
+
+CREATE TABLE respuesta_predefinida (
+  id serial NOT NULL,
+  id_entidad int NOT NULL default '0' REFERENCES entidad(id) ON DELETE CASCADE,
+  id_area int NOT NULL default '0',
+  id_moderador int NOT NULL default '0',
+  texto varchar(255) NOT NULL default '',
+  PRIMARY KEY  (id)
+) ;
+
+
+CREATE TABLE serdow_serversdown (
+  pk_serdow_key varchar(255),
+  PRIMARY KEY  (pk_serdow_key)
+) ;
+
+CREATE TABLE servers (
+  id serial NOT NULL,
+  ip varchar(15) NOT NULL default '',
+  port smallint  NOT NULL default '0',
+  private_ip varchar(15) NOT NULL default '',
+  private_port smallint  NOT NULL default '0',
+  service_ip varchar(15) NOT NULL default '',
+  PRIMARY KEY  (id)
+) ;
+
+
+
+CREATE TABLE servidor (
+  id serial NOT NULL,
+  nombre varchar(75) NOT NULL default '',
+  ip varchar(50) NOT NULL default '',
+  conexiones_permitidas int NOT NULL default '0',
+  conexiones_asignadas int  NOT NULL default '0',
+  nombre_privada varchar(75) NOT NULL default '',
+  ip_privada varchar(50) NOT NULL default '',
+  espacio_disco int NOT NULL default '0',
+  espacio_disco_backups int NOT NULL default '0',
+  fecha_expiracion varchar(10) default NULL,
+  PRIMARY KEY  (id)
+) ;
+
+CREATE TABLE sesion_abm (
+  id_sesion int NOT NULL default '0' REFERENCES sesion(id) ON DELETE CASCADE,
+  id_stream smallint NOT NULL default '0',
+  kbps smallint NOT NULL default '0',
+  fps smallint NOT NULL default '0',
+  keyframe smallint NOT NULL default '0',
+  pc smallint NOT NULL default '0',
+  pda smallint NOT NULL default '0',
+  mobile smallint NOT NULL default '0',
+  PRIMARY KEY  (id_sesion,id_stream)
+) ;
+
+CREATE TABLE sesion_acceso (
+  id_sesion int NOT NULL default '0' REFERENCES sesion(id) ON DELETE CASCADE,
+  id_acceso int NOT NULL default '0',
+  es_grupo smallint NOT NULL default '0',
+  PRIMARY KEY  (id_sesion,id_acceso)
+) ;
+
+CREATE TABLE sesion_documento (
+  id serial NOT NULL,
+  id_sesion int NOT NULL default '0' REFERENCES sesion(id) ON DELETE CASCADE,
+  descripcion varchar(20) NOT NULL default '',
+  url varchar(255) NOT NULL default '',
+  PRIMARY KEY  (id)
+) ;
+
+CREATE TABLE sesion_satelite (
+  id_sesion int NOT NULL default '0' REFERENCES sesion(id) ON DELETE CASCADE,
+  id_satelite int NOT NULL default '0',
+  PRIMARY KEY  (id_sesion, id_satelite)
+) ;
+
+CREATE TABLE sesion_usuario (
+  id_cdr int NOT NULL default '0',
+  id_usuario int NOT NULL default '0',
+  rol char NOT NULL default 'T',
+  servicios_utilizados varchar(64) NOT NULL default '0000000000000000000000000000000000000000000000000000000000000000',
+  inicio_sesion varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  final_sesion varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  tipo_conexion int NOT NULL default '0',
+  id_servidor int NOT NULL default '0',
+  id_plataforma int NOT NULL default '0',
+  PRIMARY KEY  (id_cdr,tipo_conexion)
+) ;
+
+CREATE TABLE sesion_usuario_historico (
+  id_cdr int NOT NULL default '0',
+  id_usuario int NOT NULL default '0',
+  rol char NOT NULL default 'T',
+  servicios_utilizados varchar(64) NOT NULL default '0000000000000000000000000000000000000000000000000000000000000000',
+  inicio_sesion varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  final_sesion varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  tipo_conexion int NOT NULL default '0',
+  id_servidor int NOT NULL default '0',
+  id_plataforma int NOT NULL default '0',
+  PRIMARY KEY  (id_cdr,tipo_conexion)
+) ;
+
+CREATE TABLE session_message (
+  id serial NOT NULL,
+  id_message_server int NOT NULL,
+  id_message_action int NOT NULL,
+  id_entity int NOT NULL default '0',
+  id_area int NOT NULL default '0',
+  id_session int NOT NULL default '0',
+  content varchar(255) NOT NULL default '',
+  receiver int NOT NULL default '0',
+  priority int NOT NULL default '0',
+  PRIMARY KEY  (id,id_message_server)
+) ;
+
+CREATE TABLE soft_version (
+  id_entity int NOT NULL default '0',
+  id_platform int NOT NULL default '0',
+  version int NOT NULL default '0',
+  filename varchar(100) NOT NULL default '',
+  errorpath varchar(255) NOT NULL default '',
+  ordershow smallint NOT NULL DEFAULT 0,
+  arch smallint NOT NULL DEFAULT 0,
+  extension varchar(30),
+  literal varchar(100),
+  information smallint NOT NULL DEFAULT 0,
+  updater smallint NOT NULL DEFAULT 0,
+  PRIMARY KEY  (id_entity,id_platform)
+) ;
+
+CREATE TABLE state_agent (
+  id serial NOT NULL,
+  username varchar(50) NOT NULL default '',
+  id_agent int NOT NULL default '0',
+  groupname varchar(50) NOT NULL default '',
+  id_group int NOT NULL default '0',
+  id_entity int NOT NULL default '0',
+  id_event int NOT NULL default '0',
+  date_event varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  id_server int NOT NULL default '0',
+  id_connection_client integer NOT NULL default '0',
+  time_event character varying(10) default NULL,
+  PRIMARY KEY  (id)
+) ;
+
+CREATE TABLE state_user (
+  id serial NOT NULL ,
+  username varchar(50) NOT NULL default '',
+  id_session int NOT NULL default '0',
+  groupname varchar(50) NOT NULL default '',
+  id_group int NOT NULL default '0',
+  id_entity int NOT NULL default '0',
+  id_event int NOT NULL default '0',
+  date_event varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  id_connection int NOT NULL default '0',
+  id_server int NOT NULL default '0',
+  PRIMARY KEY  (id)
+) ;
+
+
+CREATE TABLE timetable (
+  id_entity int NOT NULL default '0',
+  id_area int NOT NULL default '0',
+  id_day char NOT NULL default '',
+  hour1 varchar(10) NOT NULL default '00:00:00',
+  hour2 varchar(10) NOT NULL default '00:00:00',
+  hour3 varchar(10) default '00:00:00',
+  hour4 varchar(10) default '00:00:00'
+) ;
+
+
+
+CREATE TABLE traductor_idioma (
+  id_traductor int NOT NULL default '0',
+  id_idioma int NOT NULL default '0',
+  PRIMARY KEY  (id_traductor,id_idioma)
+) ;
+
+CREATE TABLE uim_servers (
+  id serial NOT NULL,
+  name varchar(75) default '',
+  private_ip varchar(21) NOT NULL default '',
+  public_ip varchar(21) NOT NULL default '',  
+  num_entities smallint  NOT NULL default '0',
+  num_users smallint  NOT NULL default '0',
+  access_ip varchar(30) NOT NULL default '',    
+  PRIMARY KEY  (id)
+) ;
+
+CREATE TABLE user_ldap (
+  id_session int NOT NULL default '0' REFERENCES sesion(id) ON DELETE CASCADE,
+  login varchar(255) NOT NULL default '',
+  PRIMARY KEY  (id_session,login)
+) ;
+
+CREATE TABLE usuario_reconexion (
+  id_cdr int NOT NULL default '0',
+  id_usuario int NOT NULL default '0',
+  fecha varchar(19) NOT NULL default '0000-00-00 00:00:00'
+) ;
+
+CREATE TABLE videoconversion (
+  idcdr int NOT NULL default '0',
+  sourcefile varchar(255) NOT NULL default '',
+  targetfile varchar(255) NOT NULL default '',
+  conversionstart varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  conversionend varchar(19) NOT NULL default '0000-00-00 00:00:00',
+  state smallint NOT NULL default '1',
+  PRIMARY KEY  (idcdr)
+) ;
+
+CREATE TABLE versions (
+  id_platform int NOT NULL default '0',
+  version int NOT NULL default '0',
+  filename varchar(100) NOT NULL default '',
+  PRIMARY KEY  (id_platform,filename)
+) ;
+
+CREATE TABLE reset
+(
+	email varchar(75) NOT NULL default '',
+	token varchar(32) NOT NULL default '',
+	timestamp timestamp default current_timestamp
+);
+
+CREATE TABLE video_bandwidths
+( 
+	id serial NOT NULL,
+	kbps integer UNIQUE NOT NULL,
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE video_fps
+( 
+	id serial NOT NULL,
+	fps integer UNIQUE NOT NULL,
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE video_resolutions
+( 
+	id serial NOT NULL,
+	width integer NOT NULL,
+	height integer NOT NULL,
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE video_codecs
+( 
+	id serial NOT NULL,
+	name character varying(8) UNIQUE NOT NULL,
+	codec integer NOT NULL,
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE video_qualities
+( 
+	id serial NOT NULL,
+	name character varying(16) UNIQUE NOT NULL,
+	id_bandwidth integer NOT NULL,
+	id_fps integer NOT NULL,
+	id_resolution integer NOT NULL,
+	id_codec integer NOT NULL,
+	PRIMARY KEY(id, name),
+	FOREIGN KEY(id_bandwidth) REFERENCES video_bandwidths(id),
+	FOREIGN KEY(id_fps) REFERENCES video_fps(id),
+	FOREIGN KEY(id_resolution) REFERENCES video_resolutions(id),
+	FOREIGN KEY(id_codec) REFERENCES video_codecs(id)
+);
+
+CREATE TABLE sharing_bandwidths
+(
+	id serial NOT NULL,
+	kbps integer UNIQUE NOT NULL,
+	PRIMARY KEY(id)
+);
+
+
+CREATE TABLE sharing_formats
+(
+	id serial NOT NULL,
+	name character varying (8) UNIQUE NOT NULL,
+	format integer NOT NULL,
+	PRIMARY KEY(id)
+);
+
+
+CREATE TABLE sharing_qualities
+( 
+	id serial NOT NULL,
+	name character varying(16) UNIQUE NOT NULL,
+	id_bandwidth integer NOT NULL,
+	id_format integer NOT NULL,
+	PRIMARY KEY(id, name),
+	FOREIGN KEY(id_bandwidth) REFERENCES sharing_bandwidths(id),
+	FOREIGN KEY(id_format) REFERENCES sharing_formats(id)
+);
+
+
+CREATE TABLE filetransfer_bandwidths
+(
+	id serial NOT NULL,
+	kbps integer UNIQUE NOT NULL,
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE filetransfer_qualities
+(
+	id serial NOT NULL,
+	name character varying(16) UNIQUE NOT NULL,
+	id_bandwidth integer NOT NULL,
+	PRIMARY KEY(id, name),
+	FOREIGN KEY(id_bandwidth) REFERENCES filetransfer_bandwidths(id)
+);
+
+CREATE TABLE package_qualities
+(
+	id_item integer not null REFERENCES packets(id) ON DELETE CASCADE,
+	id_quality integer not null,
+	id_service integer not null,
+	pred integer not null default 0,	
+	PRIMARY KEY( id_item, id_quality, id_service )
+);
+
+CREATE TABLE company_qualities
+( 
+	id_item integer not null REFERENCES entidad(id) ON DELETE CASCADE,
+	id_quality integer not null,
+	id_service integer not null,
+	pred integer not null default 0,	
+	PRIMARY KEY( id_item, id_quality, id_service )
+);
+
+CREATE TABLE area_qualities
+(
+	id_item integer not null REFERENCES area(id) ON DELETE CASCADE,
+	id_quality integer not null,
+	id_service integer not null,
+	pred integer not null default 0,	
+	PRIMARY KEY( id_item, id_quality, id_service )
+);
+
+CREATE TABLE session_qualities
+( 
+	id_item integer not null REFERENCES sesion(id) ON DELETE CASCADE,
+	id_quality integer not null,
+	id_service integer not null,
+	pred integer not null default 0,	
+	PRIMARY KEY( id_item, id_quality, id_service )
+);
+
+create index areaentidad_idx ON area(id_entidad);
+create index sesionentidad_idx ON sesion(id_entidad);
+create index usuarioentidad_idx ON usuario(id_entidad);
+create index cdrhistoricosesion_idx ON cdr_historico(id_sesion);
+create index sesionusuariohistoricocdr_idx ON sesion_usuario_historico(id_cdr);
+
+CREATE LANGUAGE plpgsql;
+CREATE TABLE conectados (
+    id_entidad integer NOT NULL CONSTRAINT firstkey PRIMARY KEY,
+    conectados_spontania integer NOT NULL default 0,
+    conectados_gateway integer NOT NULL default 0    
+);
+
+insert into conectados(id_entidad) select id from entidad;
+
+CREATE OR REPLACE FUNCTION iniciar_conectados() RETURNS trigger AS $iniciar_conectados$
+  DECLARE
+  BEGIN
+    IF TG_OP = 'INSERT' THEN
+       insert into conectados(id_entidad) values(NEW.id);
+       RETURN NEW;
+    END IF;
+    IF TG_OP = 'DELETE' THEN
+        delete from conectados where id_entidad=OLD.id;      
+       RETURN OLD;
+    END IF;
+  END;
+$iniciar_conectados$ LANGUAGE plpgsql;
+CREATE TRIGGER iniciar_conectados BEFORE INSERT OR DELETE
+    ON entidad FOR EACH ROW
+    EXECUTE PROCEDURE iniciar_conectados();
+
+
+
+CREATE OR REPLACE FUNCTION rellenar_conectados() RETURNS trigger AS $rellenar_conectados$
+	DECLARE
+  BEGIN
+		IF TG_OP = 'INSERT' THEN
+			IF NEW.id_plataforma = 11 OR  NEW.id_plataforma = 12 THEN
+	    	UPDATE conectados SET conectados_gateway = conectados_gateway + 1 WHERE id_entidad = (select entidad.id from entidad, cdr where cdr.id_entidad=entidad.id and cdr.id=NEW.id_cdr);
+	      RETURN NEW;
+			ELSE
+	      UPDATE conectados SET conectados_spontania = conectados_spontania + 1 WHERE id_entidad = (select entidad.id from entidad, cdr where cdr.id_entidad=entidad.id and cdr.id=NEW.id_cdr);
+	      RETURN NEW;
+			END IF;
+		END IF;
+		IF TG_OP = 'DELETE' THEN
+			IF OLD.id_plataforma = 11 OR  OLD.id_plataforma = 12 THEN
+	    	UPDATE conectados SET conectados_gateway = conectados_gateway - 1  WHERE id_entidad = (select entidad.id from entidad, cdr where cdr.id_entidad=entidad.id and cdr.id=OLD.id_cdr);
+	      RETURN OLD;
+			ELSE
+	      UPDATE conectados SET conectados_spontania = conectados_spontania - 1  WHERE id_entidad = (select entidad.id from entidad, cdr where cdr.id_entidad=entidad.id and cdr.id=OLD.id_cdr);
+	      RETURN OLD;
+			END IF;
+		END IF;
+  END;
+$rellenar_conectados$ LANGUAGE plpgsql;
+CREATE TRIGGER rellenar_conectados BEFORE INSERT OR DELETE
+    ON sesion_usuario FOR EACH ROW
+    EXECUTE PROCEDURE rellenar_conectados();
+
+CREATE OR REPLACE FUNCTION pasar_conexion_a_historico() RETURNS trigger AS $pasar_conexion_a_historico$
+  DECLARE
+  BEGIN
+    delete from conexion_historico where id=OLD.id;
+    insert into conexion_historico select * from conexion where id = OLD.id;
+    RETURN OLD;
+  END;
+$pasar_conexion_a_historico$ LANGUAGE plpgsql;
+CREATE TRIGGER pasar_conexion_a_historico BEFORE DELETE
+    ON conexion FOR EACH ROW
+    EXECUTE PROCEDURE pasar_conexion_a_historico();
+
+CREATE OR REPLACE FUNCTION pasar_sesion_usuario_a_historico() RETURNS trigger AS $pasar_sesion_usuario_a_historico$
+  DECLARE
+  BEGIN
+    insert into sesion_usuario_historico select * from sesion_usuario where tipo_conexion=OLD.tipo_conexion;
+    RETURN OLD;
+  END;
+$pasar_sesion_usuario_a_historico$ LANGUAGE plpgsql;
+CREATE TRIGGER pasar_sesion_usuario_a_historico BEFORE DELETE
+    ON sesion_usuario FOR EACH ROW
+    EXECUTE PROCEDURE pasar_sesion_usuario_a_historico();
+
+CREATE OR REPLACE FUNCTION pasar_cdr_a_historico() RETURNS trigger AS $pasar_cdr_a_historico$
+  DECLARE
+  BEGIN
+    insert into cdr_historico select * from cdr where id=OLD.id;
+    RETURN OLD;
+  END;
+$pasar_cdr_a_historico$ LANGUAGE plpgsql;
+CREATE TRIGGER pasar_cdr_a_historico BEFORE DELETE
+    ON cdr FOR EACH ROW
+    EXECUTE PROCEDURE pasar_cdr_a_historico();
+
+alter table conexion add instante timestamp default now();
+alter table conexion_historico add instante timestamp default now();
+
+alter table sesion_usuario_historico drop CONSTRAINT sesion_usuario_historico_pkey;
+delete from sesion_usuario where final_sesion <>'0000-00-00 00:00:00';  
+
+select setval('cdr_id_seq',(select max(id) + 1 from cdr_historico));
+select setval('conexion_id_seq',(select max(id) + 1 from conexion_historico));
+
+
+INSERT INTO admin ( login ,  password , partner ) VALUES ('temp','HRqBp2WjgEIQlDzArKDHzg==', 'DIALCOM');
+INSERT INTO adminBackup ( id, login ,  password , partner ) VALUES (1,'temp','HRqBp2WjgEIQlDzArKDHzg==', 'DIALCOM');
+INSERT INTO idioma ( nombre ,  lenguaje ,  pais ) VALUES ('Español','es','ES' );
+INSERT INTO idioma ( nombre ,  lenguaje ,  pais ) VALUES ('Français','fr','FR');
+INSERT INTO idioma ( nombre ,  lenguaje ,  pais ) VALUES ('English','en','US');
+INSERT INTO idioma ( nombre ,  lenguaje ,  pais ) VALUES ('日本語','ja','JA');
+
+INSERT INTO servidor ( nombre ,  ip ,  conexiones_permitidas ,  conexiones_asignadas ,  nombre_privada ,  ip_privada ) VALUES ('192.168.1.171','192.168.1.171',2000,0,'192.168.1.171','192.168.1.171');
+INSERT INTO licenses( webconference_max, webconference, webconference_excess, webcontrol_max, webcontrol, webcontrol_excess, im_max, im, im_excess, excess, gateway, gateway_max ) VALUES (5,0,0,0,0,0,5,0,0,0,0,0);
+
+-- Configuracion de GATEWAY H323
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'WORK_MODE','0','0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'LISTEN_IP','','1','1' );
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'GATEKEEPER_USE','0','1','1');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'GATEKEEPER_IP_NAME','','1','1');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'GATEKEEPER_USER','','1','1');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'GATEKEEPER_PASSWORD','','1','1');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'GATEKEEPER_TYPE_REGISTER','endpoint','1','1');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'GATEWAY_USE','0','1','1');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'GATEWAY_IP_NAME','','1','1');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'NAT_USE','0','1','1');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'NAT_IP_ADDRESS','','1','1');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'DISTRIBUTION_SERVER_USE','0','0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'DISTRIBUTION_SERVER','','1','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_SIZE','0','1','1');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_QUALITY','25','1','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_FPS','5','1','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_KBPS','40','1','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_WRONG_DIALED_NUMBER', 'PhoneNumberNotExist.avi', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_INSERT_PIN', 'InsertPIN.avi', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_WRONG_PIN', 'WrongPIN.avi', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_ERROR_CONNECTING_DCS', 'ErrorDCS.avi', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_FIRST_USER', 'FirstUser.avi', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_CONNECTED_ROOM', 'InsideConference.avi', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_MAX_PIN_NUMBER', 'ExceedAttempts.avi', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_WELCOME', 'Welcome.avi', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_NO_AVAILABLE_LICENCES', 'MaxLicense.avi', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_SESSION_FULL', 'Engaged.avi', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_NO_MODERATOR_IN_SESSION', 'NoModerator.avi', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_USER_IS_ALREADY_IN_SESSION', 'UsernameInUse.avi', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_WAITING_PARTICIPANTS', '', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_NO_SERVICE', '', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_INIT_BILLING', '', '0','0');
+--Especificas de webcall
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_IN_THE_QUEUE', 'AgentsBusy.avi', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_CALL_LATER', 'CallLater.avi', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'VIDEO_NO_AGENTS_CONNECTED', 'NoAgents.avi', '0','0');
+--Fin Especificas de webcall
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'IMG_PRESENTATION_SMALL', 'DialcomLogop.jpg', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'IMG_PRESENTATION_BIG', 'DialcomLogog.jpg', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'H323_LOG_LEVEL', '3', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'WCG_LOG_LEVEL', '5', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'LOG_SIZE', '10', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'LOG_PATH', '/tmpWebConfGatewayH323/', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'WRONG_PIN_PERMITTED', '3', '1','1');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'OUTGOING_CALL_DISABLED', '0', '1','1');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'OUTGOING_CALL_NO_ANSWER_TIME', '30', '1','1');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'CHECK_CALLINGNUMBER', '0', '1','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'SEND_XML_REPORTS', '0', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'XML_SERVER_URL', '', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'KEEPALIVEPORT', '444', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'DISABLE_VIDEO_CALLS', '0', '0','0');
+INSERT INTO configuration_services ( id_service, name, value, visible, modifiable ) VALUES (3,'OUTGOING_CALL_PREFIXS', '', '0','0');
+
+
+INSERT INTO video_bandwidths values ( 1, 10 );
+INSERT INTO video_bandwidths values ( 2, 20 );
+INSERT INTO video_bandwidths values ( 3, 33 );
+INSERT INTO video_bandwidths values ( 4, 40 );
+INSERT INTO video_bandwidths values ( 5, 64 );
+INSERT INTO video_bandwidths values ( 6, 80 );
+INSERT INTO video_bandwidths values ( 7, 100 );
+INSERT INTO video_bandwidths values ( 8, 128 );
+INSERT INTO video_bandwidths values ( 9, 256 );
+INSERT INTO video_bandwidths values ( 10, 350 );
+INSERT INTO video_bandwidths values ( 11, 512 );
+INSERT INTO video_bandwidths values ( 12, 1024 );
+INSERT INTO video_bandwidths values ( 13, 2048 );
+INSERT INTO video_bandwidths values ( 14, 768 );
+INSERT INTO video_bandwidths values ( 15, 1500 );
+select setval('video_bandwidths_id_seq',(select max(id) + 1 from video_bandwidths));
+
+INSERT INTO sharing_bandwidths values ( 1, 10 );
+INSERT INTO sharing_bandwidths values ( 2, 20 );
+INSERT INTO sharing_bandwidths values ( 3, 33 );
+INSERT INTO sharing_bandwidths values ( 4, 40 );
+INSERT INTO sharing_bandwidths values ( 5, 64 );
+INSERT INTO sharing_bandwidths values ( 6, 80 );
+INSERT INTO sharing_bandwidths values ( 7, 100 );
+INSERT INTO sharing_bandwidths values ( 9, 128 );
+INSERT INTO sharing_bandwidths values ( 10, 256 );
+INSERT INTO sharing_bandwidths values ( 11, 350 );
+INSERT INTO sharing_bandwidths values ( 12, 512 );
+INSERT INTO sharing_bandwidths values ( 13, 1024 );
+INSERT INTO sharing_bandwidths values ( 14, 2048 );
+INSERT INTO sharing_bandwidths values ( 15, 768 );
+INSERT INTO sharing_bandwidths values ( 16, 1500 );
+select setval('sharing_bandwidths_id_seq',(select max(id) + 1 from sharing_bandwidths));
+
+
+INSERT INTO filetransfer_bandwidths values ( 1, 400 );
+select setval('filetransfer_bandwidths_id_seq',(select max(id) + 1 from filetransfer_bandwidths));
+
+INSERT INTO video_fps values ( 1, 1 );
+INSERT INTO video_fps values ( 2, 2 );
+INSERT INTO video_fps values ( 3, 3 );
+INSERT INTO video_fps values ( 4, 4 );
+INSERT INTO video_fps values ( 5, 5 );
+INSERT INTO video_fps values ( 6, 6 );
+INSERT INTO video_fps values ( 7, 7 );
+INSERT INTO video_fps values ( 8, 8 );
+INSERT INTO video_fps values ( 9, 9 );
+INSERT INTO video_fps values ( 10, 10 );
+INSERT INTO video_fps values ( 11, 12 );
+INSERT INTO video_fps values ( 12, 15 );
+INSERT INTO video_fps values ( 13, 24 );
+select setval('video_fps_id_seq',(select max(id) + 1 from video_fps));
+
+INSERT INTO video_resolutions values ( 1, 320, 240 );
+INSERT INTO video_resolutions values ( 2, 640, 480 );
+select setval('video_resolutions_id_seq',(select max(id) + 1 from video_resolutions));
+
+INSERT INTO video_codecs values ( 1, 'MPEG4', 510 );
+select setval('video_codecs_id_seq',(select max(id) + 1 from video_codecs));
+
+INSERT INTO sharing_formats values ( 1, '2', 1 );
+INSERT INTO sharing_formats values ( 2, '16', 4 );
+INSERT INTO sharing_formats values ( 3, '256', 8 );
+INSERT INTO sharing_formats values ( 4, '256G', 9 );
+INSERT INTO sharing_formats values ( 5, '65535', 16 );
+select setval('sharing_formats_id_seq',(select max(id) + 1 from sharing_formats));
+
+INSERT INTO video_qualities values ( 1, 'GPRS'      , 1 , 1  , 1 , 1 );
+INSERT INTO video_qualities values ( 2, 'MODEM'     , 3 , 2  , 1 , 1 );
+INSERT INTO video_qualities values ( 3, 'RDSI'      , 4 , 3  , 1 , 1 );
+INSERT INTO video_qualities values ( 4, 'ADSL 256'  , 6 , 6  , 1 , 1 );
+INSERT INTO video_qualities values ( 5, 'ADSL 512'  , 7 , 8  , 1 , 1 );
+INSERT INTO video_qualities values ( 6, 'ADSL 2M'   , 8 , 10 , 1 , 1 );
+INSERT INTO video_qualities values ( 7, 'SATELITE'  , 9 , 12 , 1 , 1 );
+--INSERT INTO video_qualities values ( 8, 'HIDEF1'    , 12, 13 , 1 , 1 );
+--INSERT INTO video_qualities values ( 9, 'HIDEF2'    , 13, 13 , 1 , 1 );
+select setval('video_qualities_id_seq',(select max(id) + 1 from video_qualities));
+
+INSERT INTO sharing_qualities values ( 1, 'MODEM'   , 4, 2  );
+INSERT INTO sharing_qualities values ( 2, 'RDSI'    , 5, 3  );
+INSERT INTO sharing_qualities values ( 3, 'ADSL'    , 7, 3  );
+INSERT INTO sharing_qualities values ( 4, 'ADSL 2MB' , 9, 3  );
+INSERT INTO sharing_qualities values ( 5, 'SATELITE', 11, 5 );
+select setval('sharing_qualities_id_seq',(select max(id) + 1 from sharing_qualities));
+
+INSERT INTO filetransfer_qualities values ( 1, 'Normal', 1 );
+select setval('filetransfer_qualities_id_seq',(select max(id) + 1 from filetransfer_qualities));

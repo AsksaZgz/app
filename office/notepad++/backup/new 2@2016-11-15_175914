@@ -1,0 +1,50 @@
+function .echoInclude()
+{
+  echo -e "root/.aws/credentials                                      ">>$1
+  echo -e "usr/local/Spontania/release.notes                          ">>$1
+  echo -e "usr/local/tomcat/lib/xmlrpcapi.jar                         ">>$1
+  echo -e "usr/local/tomcat/lib/SpontaniaUser.jar                     ">>$1
+  echo -e "usr/local/tomcat/lib/SpontaniaAL.jar                       ">>$1
+  echo -e "usr/local/tomcat/lib/SpontaniaWS.jar                       ">>$1
+  echo -e "usr/local/tomcat/lib/SpontaniaResources.jar                ">>$1
+  echo -e "usr/local/tomcat/lib/SpontaniaParameterExchangerClient.jar ">>$1
+  echo -e "usr/local/tomcat/lib/commons-fileupload-1.2.2.jar          ">>$1
+  echo -e "usr/local/tomcat/webapps/ROOT/index.html                   ">>$1
+  echo -e "usr/local/tomcat/webapps/admin                             ">>$1
+  echo -e "usr/local/tomcat/webapps/axis                              ">>$1
+  echo -e "usr/local/tomcat/webapps/comun                             ">>$1
+  echo -e "usr/local/tomcat/webapps/eServices                         ">>$1
+  echo -e "usr/local/tomcat/webapps/portal                            ">>$1
+  echo -e "usr/local/tomcat/webapps/saas                              ">>$1
+  echo -e "usr/local/tomcat/webapps/spn                               ">>$1
+  echo -e "usr/local/tomcat/webapps/spn-common                        ">>$1
+  echo -e "usr/local/tomcat/webapps/webconference                     ">>$1
+  echo -e "usr/local/Spontania/batch                                  ">>$1
+  
+  echo -e "download                                ">>$1
+  echo -e "entidades/[0-9]*                        ">>$1
+  echo -e "partners                                ">>$1
+  echo -e "docs                                    ">>$1
+  echo -e "docs1                                   ">>$1
+  echo -e "nbproject                               ">>$1
+  echo -e "webconference/scripts/ssup/conf         ">>$1
+  echo -e "webconference/scripts/conf              ">>$1
+  echo -e "webconference/scripts/conf1             ">>$1
+  echo -e "webconference/scripts/openfire          ">>$1
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}

@@ -1,0 +1,25 @@
+function _spontaniaEchoInclude()
+{
+  echo -e "function spontaniaInclude()">>$1
+  echo -e "{">>$1
+  echo -e "echo -e \"root/.aws/credentials\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/Spontania/release.notes\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/lib/xmlrpcapi.jar\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/lib/SpontaniaUser.jar\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/lib/SpontaniaAL.jar\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/lib/SpontaniaWS.jar\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/lib/SpontaniaResources.jar\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/lib/SpontaniaParameterExchangerClient.jar\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/lib/commons-fileupload-1.2.2.jar\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/webapps/ROOT/index.html\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/webapps/admin\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/webapps/axis\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/webapps/comun\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/webapps/eServices\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/webapps/portal\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/webapps/saas\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/webapps/spn\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/webapps/spn-common\"\>\>\$_include">>$1
+  echo -e "echo -e \"usr/local/tomcat/webapps/webconference\"\>\>\$_include">>$1
+  echo -e "}">>$1
+}

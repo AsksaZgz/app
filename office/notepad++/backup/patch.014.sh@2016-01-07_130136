@@ -1,0 +1,220 @@
+#! /bin/bash
+################################################################################ 
+# Patch Release notes ########################################################## 
+# 3.2 - 20151209 ############################################################### 
+#     Quit controls exists services
+# 3.1 - 20151130 ############################################################### 
+#     Pause to start Catalina
+# 3.0 - 20151127 ############################################################### 
+#	  Change order of exec, exec service at the end
+# 2.0 - 20151113 ############################################################### 
+#     Add|quit web service
+################################################################################ 
+#
+#
+#
+#
+################################################################################ 
+_version=014
+_version_server=6.8.2.9
+################################################################################ 
+#
+#
+#
+#
+################################################################################ 
+_patch_path=/usr/local/Spontania/patch.$_version
+_patch_log=$_patch_path/patch.$_version.log
+_patch_error=$_patch_path/patch.$_version.error
+_patch_server_new=webconferencebase.$_version_server
+_patch_sql=$_patch_path/patch.$_version.sql
+_patch_sever_backup=$_patch_path/patch.$_version.backup_server.tar.gz
+_patch_backup_file=$_patch_path/patch.$_version.backup.tar.gz
+_patch_backup_db=$_patch_path/patch.$_version.backup_db
+
+_patch_include=patch.$_version.files_include
+_patch_patch=patch.$_version.tar.gz
+################################################################################ 
+#
+#
+#
+#
+################################################################################ 
+clear
+/usr/local/tomcat/bin/version.sh | grep "Server version:"
+/usr/local/tomcat/bin/version.sh | grep "JVM Version:"
+
+if [ ! -d $_patch_path ];
+then
+	mkdir $_patch_path
+fi
+################################################################################ 
+#
+#
+#
+#
+#############################################################################
+ echo -e "Version: $_version"													 >> $_patch_log 
+ echo -e "Version: $_version"	         										 >> $_patch_error 
+ echo -e "Errores:"				                    							 >> $_patch_error 
+ #tar -czvf 20150901.tar.gz  --after-date='30 days ago' --files-from=20150901.include --exclude-from=20150901.exclude
+ #tar -czvf patch.tar.gz  --files-from=patch_files_include --exclude-from=patch_files_exclude
+ service catalina stop															 >> $_patch_log 2>> $_patch_error
+ 
+ # backup files
+ tar -czvf $_patch_backup_file  --files-from=$_patch_include						 >> $_patch_log 2>> $_patch_error
+ 
+ 
+ # exists backups
+ if [ -f $_patch_backup_file ]
+ then
+ 	echo -e "backup files OK"													 >> $_patch_log 2>> $_patch_error
+ 	echo -e "backup files OK"													
+ 	
+ 	service postgresql start 													 >> $_patch_log 2>> $_patch_error
+ 	# backup database
+ 	pg_dump webconference  > $_patch_backup_db									 			 	2>> $_patch_error
+ 
+ 	if [ -f $_patch_backup_db ]
+ 	then
+ 		echo -e "backup db OK"													 >> $_patch_log 2>> $_patch_error
+ 		echo -e "backup db OK"													
+ 		
+ 		# apply patch
+ 		tar -xzvf $_patch_patch													 >> $_patch_log 2>> $_patch_error
+ 		
+ 		# queries
+ 		if [ -f $_patch_sql ]
+ 		then
+ 			psql webconference < $_patch_sql									 >> $_patch_log 2>> $_patch_error
+ 		fi
+ 		# generate links
+ 		ldconfig 																 >> $_patch_log 2>> $_patch_error
+ 	fi
+ fi
+ 
+ service catalina start															 >> $_patch_log 2>> $_patch_error
+ ################################################################################ 
+ #
+ #
+ #
+ #
+ ################################################################################
+ sleep 10 
+ ### SERVER ##################################################################### 
+ _server_update=0
+ _server_testV3=10-162-90-24
+ 
+ if [ -f $_patch_path/$_patch_server_new ]
+ then
+ 	_server_update=1
+ fi
+ ### SERVERS NOT UPDATE SERVER
+ ### TestV3 10-162-90-24
+ case $HOSTNAME in ($_server_testV3)
+     _server_update=0;;
+ esac
+ 
+ # sever stop
+ if [ $_server_update = 1 ]
+ then
+ 	tar -czvf $_patch_sever_backup /usr/local/bin/webconferencebase
+ 	
+ 	if [ -f $_patch_sever_backup ]
+ 	then
+ 		echo -e "backup SERVER OK"													 >> $_patch_log 2>> $_patch_error
+ 		echo -e "backup SERVER OK"
+ 		
+ 		killall /usr/local/bin/webconferencebase									 					>> $_patch_log 2>> $_patch_error
+ 		sleep 5
+ 		rm -f /usr/local/bin/webconferencebase
+ 		cd $_patch_path
+ 		cp -f $_patch_server_new /usr/local/bin
+ 		cd /usr/local/bin
+ 		ln -s $_patch_server_new webconferencebase
+ 		chmod 0755 /usr/local/bin/webconferencebase*										 >> $_patch_log 2>> $_patch_error
+ 		/usr/local/bin/webconferencebase												 >> $_patch_log 2>> $_patch_error
+ 	fi
+ fi   
+############################################################################# 
+#
+#
+#
+#
+################################################################################
+### Web Services ############################################################### 
+### Web Services ############################################################### 
+_ws_deploy='deploy*.wsdd'
+_ws_undeploy='un'$_ws_deploy
+_ws_config_path=/usr/local/tomcat/webapps/axis/WEB-INF
+_ws_config=server-config.wsdd
+_ws_backup=$(date +%Y%m%d)
+_ws_backup_patch=server-config.wsdd
+_ws_patch=$_patch_path
+_ws_spontania=/usr/local/Spontania/ws
+
+if [ ! -d $_ws_spontania ];
+then
+	mkdir $_ws_spontania
+fi
+
+#3.2# if [ -f $_ws_patch/$_ws_undeploy ] || [ -f $_ws_patch/$_ws_deploy ]
+#3.2# then
+	echo "Backup ------------------------------------------------------------------ "
+	cd $_ws_patch
+	cp $_ws_config_path/$_ws_config $_ws_config.$_ws_backup
+	
+	cd $_ws_config_path
+	cp $_ws_config $_ws_config.$_ws_backup
+	echo "Backup ------------------------------------------------------------------/"
+#3.2# fi
+
+#3.2# if [ -f $_ws_patch/$_ws_undeploy ]
+#3.2# then
+	echo "Quit Service ------------------------------------------------------------ "
+	
+	export AXISCLASSPATH=/usr/local/tomcat/webapps/axis/WEB-INF/lib/*
+	export AXISCLASSPATH=$AXISCLASSPATH:/usr/local/tomcat/lib/*
+	### To old version tomcat
+	export AXISCLASSPATH=$AXISCLASSPATH:/usr/local/tomcat/common/lib/*
+	
+	cd $_ws_patch
+	_ws_files=`find * -name "$_ws_undeploy"`
+    for f in $_ws_files ;
+    do
+		echo "Exec un$f..."
+		/usr/local/java/bin/java -cp "$AXISCLASSPATH" org.apache.axis.client.AdminClient -p 80 $f
+		cp $f $_ws_spontania/$f
+    done
+	echo "Quit Service ------------------------------------------------------------/"
+#3.2# fi
+#3.2# 
+#3.2# if [ -f $_ws_patch/$_ws_deploy ]
+#3.2# then
+    echo "Add Service ---------------------------------------------------------- "
+	
+	export AXISCLASSPATH=/usr/local/tomcat/webapps/axis/WEB-INF/lib/*
+	export AXISCLASSPATH=$AXISCLASSPATH:/usr/local/tomcat/lib/*
+	### To old version tomcat
+	export AXISCLASSPATH=$AXISCLASSPATH:/usr/local/tomcat/common/lib/*
+	
+	cd $_ws_patch
+	_ws_files=`find * -name "$_ws_deploy"`
+    for f in $_ws_files ;
+    do
+      echo "Service: $f..." 
+	  /usr/local/java/bin/java -cp "$AXISCLASSPATH" org.apache.axis.client.AdminClient -p 80 $f
+	  cp $f $_ws_spontania/$f
+    done
+    echo "Add Service ----------------------------------------------------------/"
+#3.2# fi
+################################################################################ 
+#
+#
+#
+#
+################################################################################
+### END ######################################################################## 
+echo -e "Error:"
+cat $_patch_error
+#TODO: restore

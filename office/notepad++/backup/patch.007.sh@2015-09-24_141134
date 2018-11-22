@@ -1,0 +1,64 @@
+#! /bin/bash
+# Patch 
+#
+_version=007
+_patch_log=patch.$_version.log
+_patch_error=patch.$_version.error
+_patch_backup_file=patch.$_version.backup.tar.gz
+_patch_backup_db=patch.$_version.backup_db
+_patch_include=patch.$_version.files_include
+_patch_sql=/usr/local/Spontania/patch.$_version.sql
+_patch_patch=patch.$_version.tar.gz
+
+clear
+
+echo -e "Version: $_version"													 >> $_patch_log 
+echo -e "Version: $_version  Errores:"											 >> $_patch_error 
+#tar -czvf 20150901.tar.gz  --after-date='30 days ago' --files-from=20150901.include --exclude-from=20150901.exclude
+#tar -czvf patch.tar.gz  --files-from=patch_files_include --exclude-from=patch_files_exclude
+service catalina stop															 >> $_patch_log 2>> $_patch_error
+
+# sever stop
+killall /usr/local/bin/webconferencebase										 >> $_patch_log 2>> $_patch_error
+
+# backup files
+tar -czvf $_patch_backup_file  --files-from=$_patch_include						 >> $_patch_log 2>> $_patch_error
+
+
+# exists backups
+if [ -f $_patch_backup_file ]
+then
+	echo -e "backup files OK"													 >> $_patch_log 2>> $_patch_error
+	echo -e "backup files OK"													
+	
+	service postgresql start 													 >> $_patch_log 2>> $_patch_error
+	# backup database
+	pg_dump webconference  > $_patch_backup_db									 			 	2>> $_patch_error
+
+	if [ -f $_patch_backup_db ]
+	then
+		echo -e "backup db OK"													 >> $_patch_log 2>> $_patch_error
+		echo -e "backup db OK"													
+		
+		# apply patch
+		tar -xzvf $_patch_patch													 >> $_patch_log 2>> $_patch_error
+		
+		# queries
+		if [ -f $_patch_sql ]
+		then
+			psql webconference < $_patch_sql									 >> $_patch_log 2>> $_patch_error
+		fi
+		# generate links
+		ldconfig 																 >> $_patch_log 2>> $_patch_error
+	fi
+fi
+
+# server start
+chmod 0755 /usr/local/bin/webconferencebase										 >> $_patch_log 2>> $_patch_error
+/usr/local/bin/webconferencebase												 >> $_patch_log 2>> $_patch_error
+
+service catalina start															 >> $_patch_log 2>> $_patch_error
+
+echo -e "Error:"
+cat $_patch_error
+#TODO: restore

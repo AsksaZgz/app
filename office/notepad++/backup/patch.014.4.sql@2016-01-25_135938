@@ -1,0 +1,36 @@
+--  Dev - Version Required - --------------------------------------------------- 
+ALTER TABLE soft_version ADD COLUMN required boolean;
+ALTER TABLE soft_version ALTER COLUMN required SET DEFAULT false;
+
+ALTER TABLE soft_version ADD COLUMN "timestamp" timestamp with time zone;
+ALTER TABLE soft_version ALTER COLUMN "timestamp" SET DEFAULT now();
+
+ALTER TABLE soft_version DROP CONSTRAINT soft_version_pkey;
+ALTER TABLE soft_version ADD CONSTRAINT soft_version_pkey PRIMARY KEY (id_entity, id_platform, filename);
+-------------------------------------------------------------------------------
+--
+--
+--
+--
+-------------------------------------------------------------------------------
+--  Dev - Now general parameters can be non editables ------------------------- 
+ALTER TABLE parametros_generales ADD COLUMN editable boolean;
+ALTER TABLE parametros_generales ALTER COLUMN editable SET DEFAULT true;
+UPDATE parametros_generales SET editable = false WHERE nombre in ('TEMPLATE_URL','ADMIN_OPENFIRE_URL','MEETING_ACCESS_CONTEXT','MEETING_ACCESS_PAGE', 'SERVER_XMLRPC');
+-------------------------------------------------------------------------------
+--
+--
+--
+--
+-------------------------------------------------------------------------------
+--  Dev - References to webcall removed --------------------------------------- 
+DELETE FROM parametros_generales WHERE nombre LIKE 'COMERCIAL%';
+-------------------------------------------------------------------------------
+--
+--
+--
+--
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+INSERT INTO parametros_generales (id_entidad, nombre, valor, descripcion, mostrar, permitir_entidad) 
+VALUES (0, 'PROTOCOL', 'http', 'Protocolo de acceso', '0', '0');

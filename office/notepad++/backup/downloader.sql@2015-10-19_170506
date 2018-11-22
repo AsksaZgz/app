@@ -1,0 +1,104 @@
+/* CREATE DATABASE parameter
+  WITH OWNER = postgres
+       ENCODING = 'UTF8'
+       TABLESPACE = pg_default
+       LC_COLLATE = 'Spanish_Spain.1252'
+       LC_CTYPE = 'Spanish_Spain.1252'
+       CONNECTION LIMIT = -1; */
+-------------------------------------------------------------------------------- 
+--
+--
+--
+--
+--
+-------------------------------------------------------------------------------- 	   
+-- Table: parameters
+
+-- DROP TABLE parameters;
+
+-- CREATE TABLE parameters
+-- (
+--   id numeric(10,0) NOT NULL DEFAULT 0,
+--   info text,
+--   expiration time with time zone NOT NULL,
+--   CONSTRAINT parameters_key PRIMARY KEY (id)
+-- )
+-- WITH (
+--   OIDS=FALSE,
+--   autovacuum_enabled=true
+-- );
+-- ALTER TABLE parameters OWNER TO postgres;
+
+
+CREATE TABLE parameters
+(
+  -- code numeric(10,0) NOT NULL DEFAULT floor(((random() * ((10)::double precision ^ (10)::double precision)) - (1)::double precision)),
+  code numeric(10,0) NOT NULL DEFAULT floor(((random() * ((2)::double precision ^ (32)::double precision)) - (1)::double precision)),
+  info text,
+  -- expiration timestamp with time zone DEFAULT (now() + '7 days'::interval),
+  expiration timestamp with time zone ,
+  CONSTRAINT parameters_key PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE,
+  autovacuum_enabled=true
+);
+ALTER TABLE parameters OWNER TO postgres;
+
+
+
+
+-------------------------------------------------------------------------------- 
+--
+--
+--
+--
+--
+-------------------------------------------------------------------------------- 
+
+
+-- Table: access_control
+
+-- DROP TABLE access_control;
+
+CREATE TABLE access_control
+(
+  address character varying(1000) NOT NULL,
+  entry timestamp without time zone NOT NULL DEFAULT now(),
+  CONSTRAINT access_control_key PRIMARY KEY (address)
+)
+WITH (
+  OIDS=FALSE,
+  autovacuum_enabled=true
+);
+ALTER TABLE access_control OWNER TO postgres;
+
+-------------------------------------------------------------------------------- 
+--
+--
+--
+--
+-------------------------------------------------------------------------------- 
+
+-- Table: addresses_list
+
+-- DROP TABLE addresses_list;
+
+CREATE TABLE addresses_list
+(
+  "type" integer,
+  address character varying(1000) NOT NULL,
+  CONSTRAINT addresses_list_key PRIMARY KEY (address)
+)
+WITH (
+  OIDS=FALSE,
+  autovacuum_enabled=true
+);
+ALTER TABLE addresses_list OWNER TO postgres;
+
+-------------------------------------------------------------------------------- 
+--
+--
+--
+--
+-------------------------------------------------------------------------------- -------------------------------------------------------------------------------- 

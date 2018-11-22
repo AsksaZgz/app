@@ -1,0 +1,5 @@
+@echo off
+set path=%path%;d:\jbg\soft\desarrollo\jdk8\bin
+echo %path%
+start MemoryAnalyzer.exe
+pause

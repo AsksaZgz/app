@@ -1,0 +1,38 @@
+@axis
+@doc
+
+
+http://localhost:8080/params/download.jsp?identifier=12
+http://192.168.0.71:8080/params/download.jsp?identifier=12
+192.168.0.71
+
+http://localhost:8080/params/launcher.jsp?identifier=2
+
+http://localhost:8080/params/TestSpontaniaLauncher.exe
+
+
+@doc
+	Escribir ficheros
+		http://www.desarrolloweb.com/articulos/2339.php 
+		http://www.java2s.com/Code/Java/JSP/FileWritingBinaryData.htm
+	
+
+	
+	
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
+	
+@axis
+	Descargas
+		https://www.apache.org/dist/axis/axis2/java/core/1.6.3/
+		
+	Manual
+		http://www.eclipse.org/webtools/community/tutorials/BottomUpAxis2WebService/bu_tutorial.html
+
+
+
+		
+@error
+	IWAB0489E Error when deploying Web service to Axis runtime
+  axis-admin failed with  {http://schemas.xmlsoap.org/soap/envelope/}Client The service cannot be found for the endpoint reference (EPR) http://localhost:8080/ParameterExchanger/services/AdminService

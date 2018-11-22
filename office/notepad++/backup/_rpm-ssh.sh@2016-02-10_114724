@@ -1,0 +1,43 @@
+#! /bin/bash
+# rpm-create-1.0.20160209 ######################################################
+clear
+################################################################################ 
+_version=3.1
+_tomcat=/usr/local/tomcat/webapps
+_rpm=/usr/local/Spontania/rpm
+_rpm_etc=$_rpm/etc
+_rpm_version=$_rpm/$_version
+_rpm_tar=$_rpm_version/Spontania-6
+_rpm_web=$_rpm_tar/SpontaniaWeb6
+_rpm_actualizaciones=$_rpm_web/actualizaciones
+_rpm_instalaciones=$_rpm_web/instalaciones
+_rpm_exclude=$_rpm_tar/rpm.files_exclude
+################################################################################
+#
+#
+#
+#
+################################################################################
+_sql=/taller/PROJECTS/SpontaniaWebSvn2016/sql
+_sql_create=$_sql/createTablesPostgres.sql
+_sql_modules=$_sql/modules
+_rpm_sql_create=$_rpm/$_version/createTablesPostgres.sql
+_webconference_sql=/taller/PROJECTS/SpontaniaWebSvn2016/webconference/scripts
+################################################################################
+#
+#
+#
+#				
+################################################################################
+# config buildrpm ##############################################################
+_buildrpm_server=192.168.0.84
+_buildrpm_spec=Spontania-6.spec
+################################################################################
+#
+#
+#
+#
+################################################################################
+# rpmbuild #####################################################################
+## scp /home/build/rpmbuild/RPMS/i386/Spontania-6-3.1.i386.rpm root@192.168.0.80:/root/
+sshpass -p build ssh build@$_buildrpm_server 'scp /home/build/rpmbuild/RPMS/i386/Spontania-6-3.1.i386.rpm root@192.168.0.80:/root/'
