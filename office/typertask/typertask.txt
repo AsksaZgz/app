@@ -1,16 +1,22 @@
+iii=1811221518
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ii*>> ID UNIQUE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<iii>> Get
-iii=1811221402
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<iin>> New
-iin=RUN: c:\jbg\soft\oficina\typertask\typertask.exe {delay=100}{controldown}{home}{controlup}{down}{down}{end}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{{yy}}{{mm}}{{dd}}{{hh}}{{uu}}{controldown}s{controlup}{delay=100}{altdown}{tab}{altup}{delay=100}{{yy}}{{mm}}{{dd}}{{hh}}{{uu}}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<iis>> Set, copy first
-iis=RUN: c:\jbg\soft\oficina\typertask\typertask.exe {delay=100}{controldown}{home}{controlup}{down}{down}{end}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{controldown}v{controlup}{controldown}s{controlup}{delay=100}{altdown}{tab}{altup}
+
+iin=RUN: c:\app\office\typertask\typertask.exe {delay=100}{controldown}{home}{controlup}{end}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{{yy}}{{mm}}{{dd}}{{hh}}{{uu}}{controldown}s{controlup}{delay=100}{altdown}{tab}{altup}{delay=100}{{yy}}{{mm}}{{dd}}{{hh}}{{uu}}
+iis=RUN: c:\app\office\typertask\typertask.exe {delay=100}{controldown}{home}{controlup}{end}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{controldown}v{controlup}{controldown}s{controlup}{delay=100}{altdown}{tab}{altup}
 
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<tt*>> TyperTask
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<tt*>> TyperTask ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<tte>> Edit 
-tts=RUN: c:\app\office\notepad++\notepad++
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ttr>> Restart 
+tte=RUN: c:\app\office\notepad++\notepad++.exe c:\app\office\typertask\typertask.txt
+;;; ttr=LIST: c:\app\office\typertask\typertask.exe {delay=200}{altdown}{f4}{altup}; c:\app\office\typertask\typertask.exe
+ttr=RUN: c:\app\office\typertask\typertask.action.cmd restart
 
 
 
