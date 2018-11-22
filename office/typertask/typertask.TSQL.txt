@@ -1,0 +1,76 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; TSQL [_q] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; CASE                  	 [case]
+;;; COMENTARIOS              [comentario]
+;;; CURSOR 			         [cursor]
+;;;
+;;; IF                  	 [if]
+;;;
+;;; SELECT 			         [s]
+;;; SEPARADOR                [-]
+;;;
+;;; TABLAS                   [tablas]
+;;; TRANSACCION 		     [tran]
+;;; TRANSACCION PRUEBAS      [tp]
+;;;
+;;; VARIABLE PARAMETRO 		 [vp]
+;;; VARIABLE USUARIO 		 [vu]
+;;;
+;;;/INDICE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; SELECT ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_qs=SELECT{enter}FROM {tab}{tab}{enter}WHERE{tab}{tab}{enter}ORDER BY{tab}{enter};{up}{up}{up}{up}{right}{right}{right}{right}{right}{tab}{tab}
+_QS=SELECT{enter}FROM {tab}{tab}{enter}WHERE{tab}{tab}{enter}ORDER BY{tab}{enter};{up}{up}{up}{up}{right}{right}{right}{right}{right}{tab}{tab}
+
+;;; CASE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_qcase=CASE{enter}{tab}WHEN{tab}{tab}THEN{enter}{tab}WHEN{tab}{tab}THEN{enter}{tab}ELSE{tab}{tab}{enter}END
+_QCASE=CASE{enter}{tab}WHEN{tab}{tab}THEN{enter}{tab}WHEN{tab}{tab}THEN{enter}{tab}ELSE{tab}{tab}{enter}END
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; CURSOR ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_qcursor=DECLARE @elemento varchar(100){enter}DECLARE listado CURSOR FOR{enter}{tab}SELECT ...{enter}{backspace}{enter}OPEN listado{enter}FETCH NEXT FROM listado INTO @elemento{enter}{enter}WHILE @@FETCH_qSTATUS = 0{enter}BEGIN{enter}{tab}EXEC(...){enter}FETCH NEXT FROM listado INTO @elemento{enter}{backspace}END{enter}{enter}CLOSE listado{enter}DEALLOCATE listado{home}
+_QCURSOR=DECLARE @elemento varchar(100){enter}DECLARE listado CURSOR FOR{enter}{tab}SELECT ...{enter}{backspace}{enter}OPEN listado{enter}FETCH NEXT FROM listado INTO @elemento{enter}{enter}WHILE @@FETCH_qSTATUS = 0{enter}BEGIN{enter}{tab}EXEC(...){enter}FETCH NEXT FROM listado INTO @elemento{enter}{backspace}END{enter}{enter}CLOSE listado{enter}DEALLOCATE listado{home}
+
+
+;;; IF ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_qif=IF{tab}{tab}BEGIN{enter}{tab}...{enter}{backspace}END ELSE {tab}BEGIN{enter}{tab}...{enter}{backspace}END
+_QIF=IF{tab}{tab}BEGIN{enter}{tab}...{enter}{backspace}END ELSE {tab}BEGIN{enter}{tab}...{enter}{backspace}END
+
+;;; TRANSACCION ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_qtran=BEGIN TRAN nbTran{enter}{tab}{enter}{backspace}--- SIMULACION{enter}ROLLBACK TRAN nbTran{enter}--- OK{enter}--- COMMIT TRAN nbTran{enter}/*{enter}*/{up}{up}{up}{up}{up}{up}
+_QTRAN=BEGIN TRAN nbTran{enter}{tab}{enter}{backspace}--- SIMULACION{enter}ROLLBACK TRAN nbTran{enter}--- OK{enter}--- COMMIT TRAN nbTran{enter}/*{enter}*/{up}{up}{up}{up}{up}{up}
+
+;;; TRANSACCION PRUEBAS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_qtp=BEGIN TRAN PRUEBA{enter}{enter}{backspace}{enter}ROLLBACK TRAN PRUEBA{home}{up}{tab}
+_QTP=BEGIN TRAN PRUEBA{enter}{enter}{backspace}{enter}ROLLBACK TRAN PRUEBA{home}{up}{tab}
+
+;;; AYUDAS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+{Control}{Shift}{Alt}T=RUN: c:\ibm\soft\typertask\typertask.cmd
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; SEPARADOR ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_q-=--------------------------------------------------------------------------------
+_Q-=--------------------------------------------------------------------------------
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; VARIABLE PARAMETRO ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_qvp=DECLARE @PARAMETRO {tab}AS NVARCHAR(16){tab}{tab}SET @PARAMETRO = ''{left}
+_QVP=DECLARE @PARAMETRO {tab}AS NVARCHAR(16){tab}{tab}SET @PARAMETRO = ''{left}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; VARIABLE USUARIO ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_qvu=DECLARE @USUARIO {tab}AS NVARCHAR(16){tab}{tab}SET @USUARIO = ''{left}
+_QVU=DECLARE @USUARIO {tab}AS NVARCHAR(16){tab}{tab}SET @USUARIO = ''{left}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; COMENTARIOS [comentario]
+_qcomentario=--- COMENTARIOS.CAMPO ---------------------------------------------------------{enter}DECLARE{tab}@BD{tab}AS NVARCHAR(MAX){enter}DECLARE{tab}@TABLA{tab}AS NVARCHAR(MAX){enter}DECLARE{tab}@CAMPO{tab}AS NVARCHAR(MAX){enter}SET{tab}@BD{tab}= 'AUCAI'{enter}SET{tab}@TABLA{tab}= 'TADS100_paqueteDTS'{enter}SET{tab}@CAMPO{tab}= 'SV_EJEC_ULTIMA'{enter}EXEC('' +{enter}{tab}' DECLARE	@COMENTARIO AS NVARCHAR(MAX) ' +{enter}' ' +{enter}' SELECT	@COMENTARIO = CAST(XE.VALUE AS NVARCHAR(MAX)) ' +{enter}' FROM		sys.objects so ' +{enter}' INNER JOIN	sys.columns XC ' +{enter}' ON			so.[object_id]	= XC.[object_id] ' +{enter}' AND			SO.NAME			= ''' + @TABLA +''' ' +{enter}' AND			XC.NAME			= ''' + @CAMPO+ ''' ' +{enter}' INNER JOIN	' + @BD + '.sys.extended_properties XE ' +{enter}' ON			XE.MAJOR_ID		= XC.[object_id] ' +{enter}' AND			XE.MINOR_ID		= XC.COLUMN_ID ' +{enter}' ' +{enter}' PRINT @COMENTARIO' +{enter}''{enter}){enter}{backspace}--------------------------------------------------------------------------------{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{end}
+_QCOMENTARIO=--- COMENTARIOS.CAMPO ---------------------------------------------------------{enter}DECLARE{tab}@BD{tab}AS NVARCHAR(MAX){enter}DECLARE{tab}@TABLA{tab}AS NVARCHAR(MAX){enter}DECLARE{tab}@CAMPO{tab}AS NVARCHAR(MAX){enter}SET{tab}@BD{tab}= 'AUCAI'{enter}SET{tab}@TABLA{tab}= 'TADS100_paqueteDTS'{enter}SET{tab}@CAMPO{tab}= 'SV_EJEC_ULTIMA'{enter}EXEC('' +{enter}{tab}' DECLARE	@COMENTARIO AS NVARCHAR(MAX) ' +{enter}' ' +{enter}' SELECT	@COMENTARIO = CAST(XE.VALUE AS NVARCHAR(MAX)) ' +{enter}' FROM		sys.objects so ' +{enter}' INNER JOIN	sys.columns XC ' +{enter}' ON			so.[object_id]	= XC.[object_id] ' +{enter}' AND			SO.NAME			= ''' + @TABLA +''' ' +{enter}' AND			XC.NAME			= ''' + @CAMPO+ ''' ' +{enter}' INNER JOIN	' + @BD + '.sys.extended_properties XE ' +{enter}' ON			XE.MAJOR_ID		= XC.[object_id] ' +{enter}' AND			XE.MINOR_ID		= XC.COLUMN_ID ' +{enter}' ' +{enter}' PRINT @COMENTARIO' +{enter}''{enter}){enter}{backspace}--------------------------------------------------------------------------------{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{end}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; TABLAS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_qtablas=SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE table_type='BASE TABLE' ORDER BY table_name
+_QTABLAS=SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE table_type='BASE TABLE' ORDER BY table_name
+

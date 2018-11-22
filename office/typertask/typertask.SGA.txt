@@ -1,0 +1,21 @@
+;;; SGA [_s] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Solicitud PROD [p]
+;;; Solicitud TEST [t] 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Solicitud TEST [st] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;_st=Jesus Bernad 8907{tab}S{tab}N{tab}{tab}
+_st={shiftdown}{tab}{shiftup}{controldown}a{controlup}{controldown}c{controlup}{tab}{tab}{controldown}v{controlup}{shiftdown}{tab}{shiftup}{controldown}a{controlup}{controldown}c{controlup}{tab}{tab}Jesus Bernad 8907{tab}S{tab}N{tab}{tab}
+_ST={shiftdown}{tab}{shiftup}{controldown}a{controlup}{controldown}c{controlup}{tab}{tab}{controldown}v{controlup}{shiftdown}{tab}{shiftup}{controldown}a{controlup}{controldown}c{controlup}{tab}{tab}Jesus Bernad 8907{tab}S{tab}N{tab}{tab}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Solicitud PROD [st] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;_sp={tab}N{tab}B{tab}{tab}Jesus Bernad 8907{tab}S{tab}N{tab}{tab}
+_sp={shiftdown}{tab}{shiftup}{controldown}a{controlup}{controldown}c{controlup}{tab}{tab}{tab}{tab}{controldown}v{controlup}{shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}{controldown}a{controlup}{controldown}c{controlup}{tab}N{tab}B{tab}{tab}Jesus Bernad 8907{tab}S{tab}N{tab}{tab}
+_SP={shiftdown}{tab}{shiftup}{controldown}a{controlup}{controldown}c{controlup}{tab}{tab}{tab}{tab}{controldown}v{controlup}{shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}{controldown}a{controlup}{controldown}c{controlup}{tab}N{tab}B{tab}{tab}Jesus Bernad 8907{tab}S{tab}N{tab}{tab}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+

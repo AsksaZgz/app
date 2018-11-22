@@ -1,0 +1,148 @@
+
+;;; DIRECCIONES DE CORREO [c] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; AD CAI 						[ad1][adcai]
+;;; AD CAR 						[adcar]
+
+;;; BANKIA CAR 					[bcar]
+;;; BANKIA CIC 					[bcic]
+;;; BANKIA Ftp 					[bftp]
+;;; BANKIA Historicos 			[bhis]
+
+;;; BI 							[bi]
+;;; BL CAI 						[blcai]
+
+;;; Firma                       [f]
+
+;;; IBM  						[i]
+
+;;; LN 							[ln]
+
+;;; Mi direccion                [yo]
+
+;;; PM 							[pm]
+
+;;; SAREB 						[sareb] 
+;;; SAO							[sao]
+;;; SISTEMAS BD 				[bd]
+;;; SISTEMAS COMUNICACIONES 	[scom]
+;;; SISTEMAS PLANIFICACION 		[splan]
+;;; SISTEMAS ISMAEL SM          [sm]
+;;; SISTEMAS SERVIDORES LINUX [slinux]
+;;; SISTEMAS SERVIDORES WINDOWS [swin]
+;;; SISTEMAS WEB [sweb]
+
+;;; TQ CAI [tq1][tqcai]
+
+;;;/DIRECCIONES DE CORREO [c] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;; AD CAI [ad1][adcai]
+_cad1=Ana María Hueso<amhueso@caja3.es>,Ana Belén Frías<afrias@caja3.es>,Eva Merchante<emerchante@caja3.es>
+_cadcai=Ana María Hueso<amhueso@caja3.es>,Ana Belén Frías<afrias@caja3.es>,Eva Merchante<emerchante@caja3.es>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; AD CAR [adcar]
+_cadcar=msperez@cajarioja.es
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; BANKIA CAR
+_cbcar=igarcia@cajarioja.es, maventin@cajarioja.es
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; BANKIA CIC
+_cbcic=Gustavo.Sanchez@lacajadecanarias.es,german.baez@lacajadecanarias.es,Angel.Garciag@lacajadecanarias.es
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; BANKIA Ftp
+_cbftp="Jorge Pfeiffer de Gorgolas (Leda)"<jpfeiffer@bankia.com>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; BANKIA Historicos
+_cbhis=Juan A Jimenez Garrido/Spain/IBM{tab}Maria Sonia Cebrian Serrano/Spain/IBM@IBMES, Maria Virginia Vicente,Edo/Spain/IBM@IBMES, Javier Baquero Piqueres <jbaquero@bankia.com>,icaro@bankia.com,Jose Miguel Hernandez Llorens <jhernandezll@bankia.com>,beatriz.mainar@es.ibm.com{tab}{tab}BANKIA - HISTORICOS - 
+_CBHIS=Juan A Jimenez Garrido/Spain/IBM{tab}Maria Sonia Cebrian Serrano/Spain/IBM@IBMES, Maria Virginia Vicente,Edo/Spain/IBM@IBMES, Javier Baquero Piqueres <jbaquero@bankia.com>,icaro@bankia.com,Jose Miguel Hernandez Llorens <jhernandezll@bankia.com>,beatriz.mainar@es.ibm.com{tab}{tab}BANKIA - HISTORICOS - 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;BI
+_cbi=Alfonso Felipe Lobera/Spain/IBM@IBMES, Juan Manuel Bueno Gil/Spain/IBM@IBMES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; BL CAI [blcai]
+_cblcai=María Pilar Silvestre Soriano <msilvestre2@caja3.es>, Rogelio Galve García <rgalve@caja3.es>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; PM
+_cpm=Clara Ezquerra Diaz/Spain/IBM@IBMES,Maria Virginia Vicente Edo/Spain/IBM@IBMES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; IBM 
+_cij=pedro.gascon@es.ibm.com
+_cis=Pedro Gascon Campos/Spain/IBM@IBMES,Javier Guajardo Valdivia/Spain/IBM@IBMES
+_cipm=Luis M Almarza Montes/Spain/IBM@IBMES
+_cib=beatriz.mainar@es.ibm.com
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; LN
+_cln=sonia.cebrian@es.ibm.com,Javier Manuel Marcos Garcia/Spain/IBM{tab}{tab}{tab}LN - 
+_CLN=sonia.cebrian@es.ibm.com,Javier Manuel Marcos Garcia/Spain/IBM{tab}{tab}{tab}LN - 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; SISTEMAS
+
+;;; SISTEMAS BD
+_cbd=Spain Distributed DataBase/Spain/IBM@IBMES{tab}pilar.urchaga@es.ibm.com,Ismael Perez Molina-Ramirez/Spain/IBM@IBMES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; SISTEMAS COMUNICACIONES
+_cscom=abraham.martin@es.ibm.com,ibana.lardies@es.ibm.com{tab}Ismael Perez Molina-Ramirez/Spain/IBM@IBMES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; SISTEMAS PLANIFICACION [splan]
+_csplan=Juan Carlos de Tapia Alonso/Spain/IBM@IBMES, Fermin Cuesta Munoz/Spain/IBM@IBMES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; SISTEMAS SERVIDORES WINDOWS [swin]
+_cswin=Luis Antonio Gimeno Gil/Spain/IBM@IBMES, Jesus Escolano Oria/Spain/IBM@IBMES, Spain Sistemas Zaragoza/Spain/IBM@IBMES{tab}Ismael Perez Molina-Ramirez/Spain/IBM@IBMES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; SISTEMAS SERVIDORES LINUX [slinux]
+_cslinux=Ricardo Cipres Bagueste/Spain/IBM@IBMES, Sebastian Calvo Burillo/Spain/IBM@IBMES,Spain Sistemas Zaragoza/Spain/IBM@IBMES{tab}Ismael Perez Molina-Ramirez/Spain/IBM@IBMES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; SISTEMAS WEB [sweb]
+_csweb=Alfonso Marcos Tarancon/Spain/IBM@IBMES,Spain Sistemas Zaragoza/Spain/IBM@IBMES{tab}Ismael Perez Molina-Ramirez/Spain/IBM@IBMES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; SISTEMAS ISMAEL SM [sm]
+_csm=Ismael Perez Molina-Ramirez/Spain/IBM@IBMES
+_CSM=Ismael Perez Molina-Ramirez/Spain/IBM@IBMES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; TQ CAI
+_ctq1=Luis Angel Beascoechea Sanchez <lbeasco@caja3.es>
+_ctqcai=Luis Angel Beascoechea Sanchez <lbeasco@caja3.es>
+_ctqcoca=Carlos Angel Coca Moreno <ccoca@caja3.es>
+_ctqadrian=Adrián José Ruiz Bernad <aruiz@caja3.es>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Firma [f]
+_cf=Atentamente,{enter}Jesús Bernad
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Mi direccion [yo]
+_cyo=jesus.bernad@es.ibm.com
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; SAREB [sareb] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_csareb=emerchante@caja3.es,rdelval@caja3.es{tab}falias@caja3.es,Lorenzo Urroz Tresaco<lurroz@caja3.es>, carlos.bacho@es.ibm.com, eduardo.llana@es.ibm.com, pedro.gascon@es.ibm.com, beatriz.vidal@es.ibm.com{tab}{tab}ATCA - SAREB - CAJA3 - 
+_CSAREB=emerchante@caja3.es,rdelval@caja3.es{tab}falias@caja3.es,Lorenzo Urroz Tresaco<lurroz@caja3.es>, carlos.bacho@es.ibm.com, eduardo.llana@es.ibm.com, pedro.gascon@es.ibm.com, beatriz.vidal@es.ibm.com{tab}{tab}ATCA - SAREB - CAJA3 - 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; EFECTIVO [EF] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_cef=carlos.bacho@es.ibm.com,eduardo.llana@es.ibm.com
+_CEF=carlos.bacho@es.ibm.com,eduardo.llana@es.ibm.com
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; SAO [sao] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_csao=Liliana Patricia Da Costa Occhipinti/Spain/IBM@IBMES,Nuria Lucas Pinilla/Spain/IBM@IBMES
+_CSAO=Liliana Patricia Da Costa Occhipinti/Spain/IBM@IBMES,Nuria Lucas Pinilla/Spain/IBM@IBMES

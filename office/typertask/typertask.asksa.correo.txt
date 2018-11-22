@@ -1,0 +1,20 @@
+
+;;; DIRECCIONES DE CORREO [c] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; GESMANAGEMENT 			[g|G]
+;;; WODAN 					[w|W]
+
+
+;;;/DIRECCIONES DE CORREO [c] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; WODAN [w|W] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_cw=wodan@telefonica.net;info@libreriawodan.com;wodan@hotmail.com{tab}www.libreriawodan.com {tab}
+_CW=wodan@telefonica.net;info@libreriawodan.com;wodan@hotmail.com{tab}www.libreriawodan.com {tab}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; GESMANAGEMENT 			[g|G]
+_cg=Promoción <promociontpz@telefonica.net>{tab}www.gesmanagement.com 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

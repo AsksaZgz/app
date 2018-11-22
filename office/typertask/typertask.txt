@@ -1,0 +1,396 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ii*>> ID UNIQUE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<iii>> Get
+iii=1811221402
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<iin>> New
+iin=RUN: c:\jbg\soft\oficina\typertask\typertask.exe {delay=100}{controldown}{home}{controlup}{down}{down}{end}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{{yy}}{{mm}}{{dd}}{{hh}}{{uu}}{controldown}s{controlup}{delay=100}{altdown}{tab}{altup}{delay=100}{{yy}}{{mm}}{{dd}}{{hh}}{{uu}}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<iis>> Set, copy first
+iis=RUN: c:\jbg\soft\oficina\typertask\typertask.exe {delay=100}{controldown}{home}{controlup}{down}{down}{end}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{controldown}v{controlup}{controldown}s{controlup}{delay=100}{altdown}{tab}{altup}
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<tt*>> TyperTask
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<tte>> Edit 
+tts=RUN: c:\app\office\notepad++\notepad++
+
+
+
+
+;;; DEVELOP ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<[--0,--9|--.|---|--,]>> DEVELOP ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+--1=esther.pardos@clearone.com{tab}temp1234{enter}
+--2=https://collaboratespace.us/admin
+--3=http://collaboratespace.us//#/join/67911925
+--4=http://192.168.0.43:4200/#/join/67911925
+
+	
+---=0{delay=200}.2{delay=200}.1 - Ticket 2372 - Super administration: the logo of entities with branding is uploaded improperly. - 1811211240
+--.=debugger\; // 1811211240
+--,=console.log('1811211240', '', );
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<--u*>> URLs
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<--uy>> Yopmail
+--uy=http://www.yopmail.com/es/
+
+
+
+
+
+
+
+;;; CLEARONE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<cc*>> CLEARONE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccl*>> LITERAL
+cclend=https://collaborate4{delay=200}d.spontania.net/literal/assets/i18n/en.json?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+cclesd=https://collaborate4{delay=200}d.spontania.net/literal/assets//i18n/es.json?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccd*>> DEVELOP
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdau>> Admin path local with token of jesus.bernad@clearone.com in http://www.collaboratespace.us
+ccdau=http://192.168.0.43:4100/#/{{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}/3244875d-debe-4b15-9314-142b2b0f2461
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdad>> Admin path local with token of jesus.bernad@clearone.com in http://collaborate4d.spontania.net
+ccdad=http://192.168.0.43:4100/#/{{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}/2b30a7b6-0dfb-4e53-b564-fe80912ad5bc
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+ccdpd=http://192.168.0.43:4300
+;;; 2721520b-e4df-4b4b-a9ac-de83170e5617
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccx*>> DOC & TEXT
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccxs>> Title Project
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccxl>> New literals in en, es, fr, ja, he, ar, zh and ru:
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccxf>> Fixed en test servers
+
+ccxs=COLLABORATE Space -
+ccxf=Fixed in collaboratespace.us and collaborate4d.spontania.net - 
+ccxl=New {delay=200}literals in en, es, fr, ja, he, ar, zh and ru:
+
+
+
+
+		
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<cca*>> ADMIN
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccan>> http://www.collaboratespace.net
+ccan=http://www.collaboratespace.net/#/datasignin
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccau>> http://www.collaboratespace.us
+ccau=http://www.collaboratespace.us/admin/#/{{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}/3244875d-debe-4b15-9314-142b2b0f2461
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccad>> http://collaborate4d.spontania.net
+ccad=http://collaborate4d.spontania.net/admin/#/{{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}/2b30a7b6-0dfb-4e53-b564-fe80912ad5bc
+
+
+
+		
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<cch*>> PORTAL - HOME
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<cchn>> http://www.collaboratespace.net
+cchn=http://www.collaboratespace.net
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<cchu>> http://www.collaboratespace.us
+cchu=http://www.collaboratespace.us
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<cchd>> http://collaborate4d.spontania.net
+cchd=http://collaborate4d.spontania.net
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccp*>> SUPER ADMIN - PARTNERS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccpn>> http://www.collaboratespace.net
+ccpn=http://www.collaboratespace.net/partners
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccpu>> http://www.collaboratespace.us
+ccpu=http://www.collaboratespace.us/partners
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccpd>> http://collaborate4d.spontania.net
+ccpd=http://collaborate4d.spontania.net/partners
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccr*>> RELEASE NOTES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccra*>> ADMIN
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccran>> .net
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccrau>> .us
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccrad>> collaborate4d
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccrl*>> LITERAL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccrln>> .net
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccrlu>> .us
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccrld>> collaborate4d
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccrh*>> HOME - PORTAL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccrhn>> .net
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccrhu>> .us
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccrhd>> collaborate4d
+
+ccran=http://www.collaboratespace.net/admin/assets/release.notes?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+ccrau=http://www.collaboratespace.us/admin/assets/release.notes?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+ccrad=http://collaborate4d.spontania.net/admin/assets/release.notes?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+
+ccrln=http://www.collaboratespace.net/literal/assets/release.notes?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+ccrlu=http://www.collaboratespace.us/literal/assets/release.notes?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+ccrld=http://collaborate4d.spontania.net/literal/assets/release.notes?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+
+ccrhn=http://www.collaboratespace.net/assets/release.notes?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+ccrhu=http://www.collaboratespace.us/assets/release.notes?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+ccrhd=http://collaborate4d.spontania.net/assets/release.notes?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccrp*>> PARTNERS - SUPERADMIN
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccrpn>> .net
+ccrpn=http://www.collaboratespace.net/partners/assets/release.notes?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccrpu>> .us
+ccrpu=http://www.collaboratespace.us/partners/assets/release.notes?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccrpd>> collaborate4d
+ccrpd=http://collaborate4d.spontania.net/partners/assets/release.notes?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccv*>> VERSIONs
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccvh*>> HOME - PORTAL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccvhn>> .net
+ccvhn=http://www.collaboratespace.net/assets/version?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccvhu>> .us
+ccvhu=http://www.collaboratespace.us/assets/version?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccvhd>> collaborate4d
+ccvhd=http://collaborate4d.spontania.net/assets/version?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccvp*>> PARTNERS - SUPERADMIN
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccvpn>> .net
+ccvpn=http://www.collaboratespace.net/partners/assets/version?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccvpu>> .us
+ccvpu=http://www.collaboratespace.us/partners/assets/version?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccvpd>> collaborate4d
+ccvpd=http://collaborate4d.spontania.net/partners/assets/version?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
+
+
+
+
+
+
+;;;;;; TEST ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<cct>> TEST
+
+
+
+
+
+
+
+
+
+
+
+; NG - ANGULAR-CLIE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+; Component
+--ngc=ng generate {delay=200}component --spec false --flat true --export true 
+; Module
+--ngm=ng generate module --spec false --flat true --module ./app modules/...
+; Service
+--ngs=ng generate service --flat true --spec false
+
+
+
+
+;CARD
+--c1=O{{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}{tabs}4242424242424242{tab}{delay=100}10{delay=100}21{tab}123{tab}
+
+--x={{yy}}{{mm}}{{dd}}{{hh}}{{uu}}
+--z={{yy}}{{mm}}{{dd}}{{hh}}{{uu}}@clearone.com
+--@={{yy}}{{mm}}{{dd}}{{hh}}{{uu}}@clearone.com
+
+
+
+
+;LDAP ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+;192.168.1.88
+--ldap-pass=Q.a31-3E
+--ldap-all=ldap://195.235.163.242:389{tab}Administrator@clearone.cl2{tab}Q.a31-3E{tab}cn=users,dc=clearone,dc=cl2{tab}sAMAccountName{tab}displayName{tab}mail{tab}phoneNumber{tab}thumbnail
+;--ldap=ldap://195.235.163.227:389{tab}Administrator@ddialcom.dial{tab}.dialcom69!{tab}cn=users,dc=ddialcom,dc=dial{tab}sAMAccountName{tab}displayName{tab}mail{tab}phoneNumber{tab}thumbnail
+
+
+
+
+;RESOURCE
+--re=R{{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}{tab}r{{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}@clearone.com{tab}clearone1!{tab}
+
+;SOCKETS
+--sm=<iq type='set'id='Oz628Nb54By5'>{shiftdown}{enter}{shiftup}{delay=100}<sptpromanagement xmlns='urn:xmpp:spt:promanagement'>{shiftdown}{enter}{shiftup}{delay=100}<setting>{shiftdown}{enter}{shiftup}{delay=100}{{delay=100}"id":"dfe14214a","action":"screen_message","content":{delay=100}{{delay=100}"message_description":"Connected to Collaborate Server - {{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}"{delay=100}}{delay=100}}{shiftdown}{enter}{shiftup}{delay=100}</setting>{shiftdown}{enter}{shiftup}{delay=100}</sptpromanagement>{shiftdown}{enter}{shiftup}{delay=100}</iq>
+
+;TEAM
+--te=T{{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}{tab}Description - T{{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}{tab}
+
+--csv=D:\jbg\project\Admin4.0\csv
+;;; Filtro para el wireshark para capturar los sockets
+--ws=ip.addr == 18.194.108.114 && tcp.port == 7070
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;TEXT ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;http://www.blindtextgenerator.com/es
+--t100=Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
+--t200=Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu
+--t250=Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.
+--t500=Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;; ETC [__] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Barra de separción /[7]
+;;; Barra de separción -[-]
+;;; Barra de separcion ;[,]
+;;; Barra de separcion *[+]
+;;; Barra de separcion :[.]
+
+;;; Fecha [d]
+
+;;; Hora  [t]
+;;; Impresion Integrada [ii]
+;;; JBG Movil [m] 
+
+;;; Marca tiempo [x] 
+;;; Posicion 80 [{control}{alt}{tab}]
+
+;;;/ETC [_] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+__f={{dd}}/{{mm}}/{{yyyy}} {{hh}}:{{uu}}
+;;; Hora [t] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+__t={{hh}}:{{uu}}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Fecha [d] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+__d={{dd}}/{{mm}}/{{yyyy}}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Marca tiempo [x] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+__x={{yyyy}}{{mm}}{{dd}}
+__X={{yyyy}}{{mm}}{{dd}}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; JBG Movil [m] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+__m=620 412 790
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+__3={delay=200}{controldown}{altdown}{delay=200}3{altup}{controlup}
+;__3={AltGrDown}33{AltGrUp}
+;__3={altGrdown}3333{altGrup}
+;;; Barra de separción -[-] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+__-=--------------------------------------------------------------------------------{home}{home}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{shiftdown}{end}{shiftup}{space}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Barra de separción /[7] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+__7={shiftdown}77777777777777777777777777777777777777777777777777777777777777777777777777777777{shiftup}{home}{home}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{shiftdown}{end}{shiftup}{space}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Barra de separcion ;[,];;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+__,={shiftdown},,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,{shiftup}{home}{home}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{shiftdown}{end}{shiftup}{space}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Barra de separcion '['];;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+__'=''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''{home}{home}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{shiftdown}{end}{shiftup}{space}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Barra de separcion *[+];;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+__+={shiftdown}********************************************************************************{shiftup}{home}{home}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{shiftdown}{end}{shiftup}{space}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Barra de separcion :[.];;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+__.={shiftdown}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::{shiftup}{home}{home}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{shiftdown}{end}{shiftup}{space}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Posicion 80 [{control}{alt}{tab}] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+{control}{alt}{tab}={end}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{home}{home}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{shiftdown}{end}{shiftup}{space}
+{control}{alt}{left}={end}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{space}{home}{home}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{right}{shiftdown}{end}{shiftup}{space}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<vv*>> TRAVEL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<vvh>> Login
+vvh=https://www.travelclub.es/tienes_tarjeta.cfm
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<vvlj>> Login Jesus
+vvlj=asksa@msn.com{tab}Tra2015!{enter}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+
+
+
+
+
+
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<tt*>>TOYSRUS
+ttd=BKBNT1YWm8zy{enter}
+ttu=https://www.toysrus.es/login.jsp{enter}
+ttc=asksa@msn.com{tab}Toy2015!{enter}
+
+ttq1=98344791{enter}
+ttq2=105298721{enter}
+ttq3=55907171{enter}
+ttq4=793784{enter}
+ttq5=404408{enter}
+ttw1=105066{enter}
+ttw2=325546{enter}
+ttw3=93409411{enter}
+ttw4=97098331{enter}
+ttw5=99371551{enter}
+tte1=101487931{enter}
+tte2=021509{enter}
+tt11=103810001{enter}
+tt12=58870011{enter}
+tt13=96841481{enter}
+tt14=103811561{enter}
+tt15=59997581{enter}
+tt21=69393851{enter}
+tt22=99409641{enter}
+tt23=54292971{enter}
+tt24=44414121{enter}
+tt25=103810791{enter}
+tt31=8054211{enter}
+tt32=55907171{enter}
+tt33=58870091{enter}
+tt34=4878531{enter}
+tt35=5296521{enter}
+tt41=103190881{enter}
+tt42=102412761{enter}
+tt43=107011481{enter}
+tt44=48297871{enter}
+tt45=105928521{enter}
+tt51=103811391{enter}
+tt52=034980{enter}
+tt53=076603{enter}
+tt54=326833{enter}
+tt55=103809991{enter}
+
+
+
+
+
+   

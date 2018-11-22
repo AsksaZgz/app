@@ -1,0 +1,17 @@
+;; SAREB [s] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; LOAN. Solicitar la ejecucción en TEST de CEFEQL [clt]
+;; REOS. Solicitar la ejecucción en TEST de CEFEQR [crt]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; LOAN. Solicitar la ejecucción en TEST de CEFEQL [clt] ;;;;;;;;;;;;;;;;;;;;;;;
+_sclt=Ejecutar CEFEQL TEST Ent 1{tab}Ejecutar CEFEQL TEST Ent 1{tab}Ejecutar CEFEQL TEST Ent 1{tab}Jesús Bernad (8907){tab}N{tab}N{tab}{tab}{enter}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{enter}{down}{down}{down}{tab}{tab}{tab}Ejecutar CEFEQL TEST Ent 1{tab}Ejecutar CEFEQL TEST Ent 1{tab}{tab}{enter}
+_SCLT=Ejecutar CEFEQL TEST Ent 1{tab}Ejecutar CEFEQL TEST Ent 1{tab}Ejecutar CEFEQL TEST Ent 1{tab}Jesús Bernad (8907){tab}N{tab}N{tab}{tab}{enter}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{enter}{down}{down}{down}{tab}{tab}{tab}Ejecutar CEFEQL TEST Ent 1{tab}Ejecutar CEFEQL TEST Ent 1{tab}{tab}{enter}	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; REOS. Solicitar la ejecucción en TEST de CEFEQR [crt] ;;;;;;;;;;;;;;;;;;;;;;;
+_scrt=Ejecutar CEFEQR TEST Ent 1{tab}Ejecutar CEFEQR TEST Ent 1{tab}Ejecutar CEFEQR TEST Ent 1{tab}Jesús Bernad (8907){tab}N{tab}N{tab}{tab}
+_SCRT=Ejecutar CEFEQR TEST Ent 1{tab}Ejecutar CEFEQR TEST Ent 1{tab}Ejecutar CEFEQR TEST Ent 1{tab}Jesús Bernad (8907){tab}N{tab}N{tab}{tab}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+

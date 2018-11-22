@@ -1,0 +1,119 @@
+;;; DOS [_2] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; BASICO		[base]
+;;;
+;;; COPIAR		        [copiar] 
+;;;
+;;; INTERNET EXPLORER	[ie]
+;;;
+;;; FIREFOX 		    [ff]
+;;; FICHERO BORRAR      [fb]
+;;; FICHERO COPIAR      [fcopiar]
+;;;
+;;; MANUAL 		        [man]
+;;; MENSAJE             [men]
+;;;
+;;; NETBEANS 		    [net]
+;;; NOTEPAD    		    [notepad]
+;;;
+;;; PUTTY               [putty] 
+;;;
+;;; REMOTO  		    [er] 
+;;;
+;;; SGA                 [sga]
+;;; SUBVERSION		    [sub]
+;;; SUB ACTUALIZAR 	    [sa]
+;;; SUB CONFIRMAR	    [sc]
+;;; SUB LOG 		    [sl] 
+;;; SUB REPO		    [sr]
+;;;
+;;; VENTANA 		    [conf] 
+;;; WINSCP [winscp]
+;;;
+;;;/DOS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; BASICO		[base] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2base=@ECHO OFF{enter}CALL :CONFIGURACION_VENTANA 20 20 0F "Basico"{enter}GOTO :EOF{enter}{enter}_2conf{delay=2}{enter}_2men{delay=2}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; COPIAR		[copiar] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2copiar=:COPIAR{enter}{tab}REM S Subdirectorios{enter}REM E Vacios{enter}REM Q No mostrar{enter}REM Y Sobrescribir{enter}XCOPY /S /E /Q /Y %~1 %~2{enter}GOTO :EOF
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; FICHERO COPIAR [fcopiar] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2fcopiar=:COPIAR_FICHERO{enter}{tab}ECHO COPIAR FICHERO{enter}ECHO ORIGEN:%~1{enter}ECHO DESTINO:%~2{enter}REM Y Sobrescribir{enter}COPY /Y %~1 %~2{enter}GOTO :EOF{enter}
+_2FCOPIAR=:COPIAR_FICHERO{enter}{tab}ECHO COPIAR FICHERO{enter}ECHO ORIGEN:%~1{enter}ECHO DESTINO:%~2{enter}REM Y Sobrescribir{enter}COPY /Y %~1 %~2{enter}GOTO :EOF{enter}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;; NOTEPAD     [notepad] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2notepad=:NOTEPAD{enter}{tab}START "NOTEPAD" "c:\IBM\soft\Notepad++Portable\Notepad++Portable.exe" %1{enter}GOTO :EOF
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; PUTTY [putty] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2putty=:PUTTY{enter}{tab}START "PUTTY" /MIN "C:\IBM\Ticketing\Soft\PuTTYPortable\PuTTYPortable.exe" %~1{enter}GOTO :EOF
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	
+;;; SUBVERSION	[sub] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2sub=:SUBVERSION{enter}{tab}START "SUBVERSION" "C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe" %1{enter}GOTO :EOF
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; SUBVERSION ACTUALIZAR 	[sa] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2sa=:SUBVERSION_ACTUALIZAR{enter}{tab}CALL :SUBVERSION "/command:update /path:%1 "{enter}GOTO :EOF	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; SUB REPO	[sr] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2sr=:SUBVERSION_REPOBROWSER{enter}{tab}CALL :SUBVERSION "/command:repobrowser /path:%1 "{enter}GOTO :EOF
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; SUB CONFIRMAR	[sc] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2sr=:SUBVERSION_CONFIRMAR{enter}{tab}CALL :SUBVERSION "/command:commit /path:%1 "{enter}GOTO :EOF
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; SUB LOG 	[sl] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2sl=:SUBVERSION_LOG{enter}{tab}CALL :SUBVERSION "/command:log /path:%1 "{enter}GOTO :EOF	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; MANUAL 	[man] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2manual=:MANUAL{enter}{tab}START "MANUAL" /MIN "y:\hta\guardar.fichero.hta" "%1" "y:\historico\"{enter}GOTO :EOF
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; VENTANA 	[conf] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2conf=:CONFIGURACION_VENTANA{enter}{tab}MODE CON: COLS=%1 LINES=%2{enter}COLOR %3{enter}TITLE %4{enter}GOTO :EOF{enter}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; NETBEANS 	[net] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2net=:NETBEANS{enter}{tab}START "NETBEANS" "c:\ibm\Ticketing\Soft\netbeans\bin\netbeans.exe"{enter}GOTO :EOF
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; FIREFOX 	[ff] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2ff=:FIREFOX{enter}{tab}START "DISTRIBUIR" "C:\Program Files\Mozilla Firefox\firefox.exe" %1{enter}GOTO :EOF
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; REMOTO  	[er] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2er=:ESCRITORIO_2REMOTO{enter}{tab}START "ESCRITORIO_2REMOTO" /MIN C:\JBG\IBM\EscritoriosRemotos\%1{enter}	GOTO :EOF	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; INTERNET EXPLORER	[ie] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2ie=:IE{enter}{tab}START "DISTRIBUIR" /MIN "c:\Program Files\Internet Explorer\iexplore" %1{enter}GOTO :EOF
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; MANAGEMENT [mn] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2mn=:MANAGEMNET{enter}{tab}START "BD_CAI_PROD" /MIN "C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\Ssms.exe" %1{enter}GOTO :EOF
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; MENSAJE [men] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2men=:MENSAJE{enter}{tab}MSG %USERNAME% /V /W %1{enter}GOTO :EOF{enter}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; SGA [sga] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2sga=:SGA{enter}{tab}CALL :FIREFOX "https://sga.atca/conexion.do"{enter}GOTO :EOF{enter}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; WINSCP [winscp] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2winscp=:WINSCP{enter}{tab}START "WINSCP" /MIN C:\IBM\Ticketing\Soft\WinSCPPortable\WinSCPPortable.exe %1{enter}GOTO :EOF{enter}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; FICHERO BORRAR [fb] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_2fb=:FICHERO_BORRAR{enter}{tab}SET _FICHERO=%1{enter}IF EXIST %_FICHERO% del /q %_FICHERO%{enter}GOTO :EOF
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

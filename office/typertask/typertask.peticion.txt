@@ -1,0 +1,18 @@
+;;; PETICIONES [_p] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_p65009=Petición:  65009  -  Sesiones fuera de abono
+_p61466=Petición:  61466  -  Incumplimiento LOPD
+_p61250=Petición:  61250  -  Pruebas generales IC3 BI
+
+;;; Peticion en desarrollo
+;;__p=p65009.fuera.abono.ln
+;;__p=p61466.incumplimiento.lopd
+;;__p=P67481.TraspasoActivosEditran
+_p_=P64666_HomeTicket
+_pht=Petición:  64666  -  EVALUAR PRINT AT HOME
+_ptl=Petición:  64989  -  Teatro López de Ayala
+_px=P64666.HomeTicket{tab}4029{tab}7200{tab}0000{tab}0325{tab}09{tab}14{tab}123{tab}{tab}jesus.bernad@es.ibm.com{tab}{tab}{space}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; LN Copiar librerias LeaserCode a LeaserConsole
+{control}{shift}{alt}W=RUN: xcopy /Q /Y i:\Leasing\P64535.Bankia.LeaserCode\bin\Debug\*.* i:\Leasing\P64535.Bankia.LeaserConsole\bin
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

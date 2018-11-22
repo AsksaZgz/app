@@ -1,0 +1,10 @@
+;;; INCIDENCIAS [_i] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_i53117=I53117.
+_i53215=incidencia: 53215  -  No llegan todos los eventos
+_i53236=Incidencia: 53236  -  Error de página web
+;__i=IBM.I53117_Badajoz.no.conecta
+;__i=I65009.2_impagado
+;_l=AnetLogService.logFormattedDebug(log, "I53117. : <<" & externalPassword & ">>", "", "")
+;__i=I53187.Buscador.No.Encuentra.Op
+;__i=I53236.ErrorPáginaWeb
+__i=Ixxxxx_atm.R52

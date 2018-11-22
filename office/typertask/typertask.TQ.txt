@@ -1,0 +1,58 @@
+;;; [tq] 		TICKETING  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; [sga10ti] GESTION DE CAMBIOS DISTRIBUCION TEST GESTION VENTA INCIDENCIA
+
+;;; [sga300t] 	GESTION DE CAMBIOS DISTRIBUCION LOGICA NEGOCIO PETICION TEST
+;;; [sga300P] 	GESTION DE CAMBIOS DISTRIBUCION LOGICA NEGOCIO PETICION PROD
+
+;;; [sga200t] 	GESTION DE CAMBIOS DISTRIBUCION PRESENTACION PETICION TEST
+;;; [sga200p] 	GESTION DE CAMBIOS DISTRIBUCION PRESENTACION PETICION PROD
+
+;;; [sao] 		MENSAJE DISTRIBUCION SAO-ARBONES
+
+;;; [r100t]   	RUTA DISTRIBUCION GESTION Y VENTA TEST
+;;; [r110t] 	RUTA PAQUETE GESTION Y VENTA TEST
+
+;;; [sga000] 	Solicitud S2 - Mtto. de estructuras DB2
+
+;;;/[tq] TICKETING  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; [sao] MENSAJE DISTRIBUCION SAO-ARBONES ;;;;;;;;;;;;;;;;;;;;;;;;
+_tqsao=Francisco Javier Arbones Artazcoz/Spain/IBM{tab}{tab}{tab}Ticketing. Nueva distribución de Janto.{tab}Hola.{enter}Nueva distribución de Janto \\intercambio-cajas.atca\cai\CAI_JANTO\nn.zip{enter}Atentamente{enter}Jesús Bernad
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; [sga10ti] GESTION DE CAMBIOS DISTRIBUCION TEST GESTION VENTA INCIDENCIA ;;;;;;;;;;
+_tqsga10ti={shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}C{tab}AN{tab}{tab}Distribucion Gestion y Venta{Delay=1000}{tab}Distribución de la solución a la _innnnn en el entorno de Test, con la herramienta de distribución para CAI versión vvv. 1h
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; [sga10tp] GESTION DE CAMBIOS DISTRIBUCION TEST GESTION VENTA PETICION ;;;;;;;;;;
+_tqsga10tp={shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}C{tab}AN{tab}{tab}{Delay=1000}Distribucion Gestion y Venta{Delay=1000}{tab}Distribución de la "_pnnnnn" en el entorno de Test, con la herramienta de distribución para CAI versión vvv. 1h
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; [sga000] Solicitud S2 - Mtto. de estructuras DB2 ;;;;;;;;;;;;;;;;;
+_tqsga000=ticketbdd1.atca oretk1 dbcai{tab}--- ticketbdd1.atca oretk1 dbcai ---{tab}CAI PROD{tab}ORACLE{tab}{{dd}}/{{mm}}/{{yyyy}}{tab}{{hh}}:{{uu}}{tab}{tab}N{tab}N
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; [sga200t] GESTION DE CAMBIOS DISTRIBUCION PRESENTACION PETICION TEST ;;;;;;;;;;
+_tqsga200t={shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}C{tab}AN{tab}{tab}{Delay=1000}Distribucion Presentación{Delay=1000}{tab}Distribución de Presentacion la "_pnnnnn" en Test, con la herramienta "Gestion de Servidores". 1h
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; [sga200p] GESTION DE CAMBIOS DISTRIBUCION PRESENTACION PETICION PROD ;;;;;;;;;;
+_tqsga200p={shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}C{tab}AN{tab}{tab}{Delay=1000}Distribucion Presentación{Delay=1000}{tab}Distribución de Presentación de la "_pnnnnn" en Producción, con la herramienta "Gestión de Servidores". 1h
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; [sga300t] GESTION DE CAMBIOS DISTRIBUCION LOGICA NEGOCIO PETICION TEST ;;;;;;;;;;
+_tqsga300t={shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}C{tab}AN{tab}{tab}{Delay=1000}Distribucion Logica Negocio{Delay=1000}{tab}Distribución de la Logica de Negocio la "_pnnnnn" en Test, con la herramienta "Gestion de Servidores". 1h
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; [sga300p] GESTION DE CAMBIOS DISTRIBUCION LOGICA NEGOCIO PETICION PROD ;;;;;;;;;;
+_tqsga300p={shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}{shiftdown}{tab}{shiftup}C{tab}AN{tab}{tab}{Delay=1000}Distribucion Logica Negocio{Delay=1000}{tab}Distribución de la Logica de Negocio la "_pnnnnn" en Producción, con la herramienta "Gestion de Servidores". 1h
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; [r100t] RUTA DISTRIBUCION GESTION Y VENTA TEST ;;;;;;;;;;;;;;;;
+_tqr100t=k:\JANTO\Distribucion\ACUMULADO_Cliente\TEST\JANTO\
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; [r110t] RUTA PAQUETE GESTION Y VENTA TEST ;;;;;;;;;;;;;;;;;;;;;
+_tqr110t=k:\JANTO\Versiones\CAI\Clientes\Test\
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

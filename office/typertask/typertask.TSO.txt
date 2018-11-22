@@ -1,0 +1,30 @@
+;;; CODIGO.CISC ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Desactivar la validación CCV de la tarjeta
+_tccd=ceci writeq ts q(1jvalcxx) from('N') item(1) rew 
+_tcdesactivar=ceci writeq ts q(1jvalcxx) from('N') item(1) rew 
+;;; Salir
+_tcsalir=cesf logoff 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; CODIGO.TSO ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; COPY
+_TCP=PRDP0   {tab}ATCLIB  {tab}        {tab}        {tab}        {tab}COPY    {tab}
+
+;;; JCL ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; JCL TEST
+_TJT=DSYSF   {tab}OPC     {tab}        {tab}        {tab}        {tab}JOBLIB  {tab}
+;;; JCL PROD
+_TJP=PSYSF   {tab}OPC     {tab}        {tab}        {tab}        {tab}JOBLIB  {tab}
+
+;;; JCL USUARIO ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_TJU=DESU0   {tab}GTTIB53 {tab}        {tab}        {tab}        {tab}JOBLIB  {tab}
+__TJU=DESU0.GTTIB53.JOBLIB{tab}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; VARIABLES TSO ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_TVJ=&OJOBNAME.
+_TVFL=&OYMD.
+_TVFC=&OYMD1.
+_TVT=&EXEC.
+_TV1=&ENT.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

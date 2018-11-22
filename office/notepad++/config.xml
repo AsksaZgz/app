@@ -86,7 +86,7 @@
         <GUIConfig name="ScintillaGlobalSettings" enableMultiSelection="no" />
         <GUIConfig name="openSaveDir" value="0" defaultDirPath="" />
         <GUIConfig name="titleBar" short="no" />
-        <GUIConfig name="stylerTheme" path="D:\jbg\soft\oficina\notepad++\stylers.xml" />
+        <GUIConfig name="stylerTheme" path="C:\app\office\notepad++\stylers.xml" />
         <GUIConfig name="delimiterSelection" leftmostDelimiter="40" rightmostDelimiter="41" delimiterSelectionOnEntireDocument="no" />
         <GUIConfig name="MISC" fileSwitcherWithoutExtColumn="no" backSlashIsEscapeCharacterForSql="yes" newStyleSaveDlg="no" isFolderDroppedOpenFiles="no" />
         <GUIConfig name="workspaceExt"></GUIConfig>
@@ -130,7 +130,6 @@
     </FindHistory>
     <FileBrowser />
     <History nbMaxFile="15" inSubMenu="no" customLength="-1">
-        <File filename="c:\Users\ClearOne\AppData\Roaming\ClearOne\SpontaniaIM\1.uimcfg" />
         <File filename="D:\jbg\doc\como\spontania.como" />
         <File filename="d:\jbg\tmp\error\201612011240.log" />
         <File filename="d:\jbg\project\Admin4.0\geolocalizacion\GeoIP-139_20161129\COPYRIGHT.txt" />
@@ -145,6 +144,7 @@
         <File filename="d:\jbg\doc\como\ant.como" />
         <File filename="C:\Users\ClearOne\Downloads\get.jsp" />
         <File filename="d:\jbg\soft\web\youtube-downloader\help.txt" />
+        <File filename="D:\jbg\project\Admin4.0\test.json" />
     </History>
     <ProjectPanels>
         <ProjectPanel id="0" workSpaceFile="" />

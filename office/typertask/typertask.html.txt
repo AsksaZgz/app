@@ -1,0 +1,23 @@
+
+;;; HTML [h] ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; INPUT IMAGEN [inputimagen]
+;;; INPUT Servicio de Correo [inputCorreo]
+
+;;;/HTML ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; INPUT IMAGEN [hinputimagen]
+_hinputimagen=<input type="image" src="" alt="" />
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; INPUT Servicio de Correo [inputCorreo]
+_hinputCorreo=<input type="hidden" name="servicio" value="" />{enter}<input type="hidden" name="destinatario" value="" />{enter}<input type="hidden" name="remitente" value="" />{enter}<input type="hidden" name="copias" value="" />{enter}<input type="hidden" name="copiasOcultas" value="" />{enter}<input type="hidden" name="direccionRespuesta" value="" />
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
