@@ -107,6 +107,8 @@
     </GUIConfigs>
     <!-- The History of opened files list -->
     <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="0" transparencyMode="1" transparency="150" dotMatchesNewline="no">
+        <Find name="SALIR" />
+        <Find name="TYPERTASK_REINICIAR" />
         <Find name="chop" />
         <Find name=" cut" />
         <Find name="cut " />
@@ -115,8 +117,6 @@
         <Find name="yui" />
         <Find name="html" />
         <Find name="compiler" />
-        <Find name="COMPRIMIR_HTML" />
-        <Find name="18918" />
         <Replace name="statistics_4" />
         <Replace name='\&quot;\&gt;\&gt;\$_include&quot;&gt;&gt;$1' />
         <Replace name='\&quot;' />
@@ -130,7 +130,6 @@
     </FindHistory>
     <FileBrowser />
     <History nbMaxFile="15" inSubMenu="no" customLength="-1">
-        <File filename="d:\jbg\tmp\error\201612011240.log" />
         <File filename="d:\jbg\project\Admin4.0\geolocalizacion\GeoIP-139_20161129\COPYRIGHT.txt" />
         <File filename="D:\jbg\doc\error\eclipse.error" />
         <File filename="d:\jbg\doc\como\patch.como" />
@@ -144,6 +143,8 @@
         <File filename="C:\Users\ClearOne\Downloads\get.jsp" />
         <File filename="d:\jbg\soft\web\youtube-downloader\help.txt" />
         <File filename="D:\jbg\project\Admin4.0\test.json" />
+        <File filename="C:\app\office\typertask\typertask.cmd" />
+        <File filename="c:\app\office\typertask\typertask.txt" />
     </History>
     <ProjectPanels>
         <ProjectPanel id="0" workSpaceFile="" />
