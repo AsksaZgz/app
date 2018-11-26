@@ -1,0 +1,20 @@
+# GIMP action-history
+
+(history-item "file-quit" 1)
+(history-item "edit-cut" 2)
+(history-item "edit-paste" 1)
+(history-item "edit-fill-fg" 0)
+(history-item "tools-by-color-select-short" 0)
+(history-item "select-invert" 0)
+(history-item "image-new" 0)
+(history-item "edit-copy" 1)
+(history-item "file-open" 0)
+(history-item "dialogs-selection-editor" 0)
+(history-item "file-open-recent-01" 0)
+(history-item "edit-clear" 0)
+(history-item "edit-fill-pattern" 0)
+(history-item "image-properties" 0)
+(history-item "select-none" 0)
+(history-item "file-export-as" 1)
+
+# end of action-history
