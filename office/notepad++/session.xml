@@ -1,13 +1,8 @@
 <NotepadPlus>
     <Session activeView="1">
         <mainView activeIndex="0" />
-        <subView activeIndex="5">
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="1" startPos="17" endPos="17" selMode="0" lang="Normal Text" encoding="-1" filename="d:\jbg\project\Admin4.0\Admin-4.0-Dashboard.project" backupFilePath="C:\app\office\notepad++\backup\Admin-4.0-Dashboard.project@2018-11-22_141128" originalFileLastModifTimestamp="1484041558" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="2443" startPos="351" endPos="351" selMode="0" lang="Batch" encoding="-1" filename="C:\app\office\typertask\typertask.action.cmd" backupFilePath="" originalFileLastModifTimestamp="1543176986" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="2443" startPos="28" endPos="28" selMode="0" lang="Normal Text" encoding="-1" filename="new 1" backupFilePath="C:\app\office\notepad++\backup\new 1@2018-11-22_150559" originalFileLastModifTimestamp="0" />
-            <File firstVisibleLine="54" xOffset="0" scrollWidth="1" startPos="0" endPos="0" selMode="0" lang="Normal Text" encoding="-1" filename="C:\app\office\typertask\typertask.cmd.old" backupFilePath="" originalFileLastModifTimestamp="1543176986" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="91" startPos="0" endPos="0" selMode="0" lang="INI file" encoding="-1" filename="C:\jbg\soft\BatToExe\settings.ini" backupFilePath="c:\app\office\notepad++\backup\settings.ini@2018-11-23_115836" originalFileLastModifTimestamp="1405971262" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="2317" startPos="2574" endPos="2574" selMode="0" lang="Normal Text" encoding="-1" filename="c:\app\office\typertask\typertask.txt" backupFilePath="C:\app\office\notepad++\backup\typertask.txt@2018-11-25_232006" originalFileLastModifTimestamp="1543177837" />
+        <subView activeIndex="0">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="8330" startPos="0" endPos="0" selMode="0" lang="Normal Text" encoding="-1" filename="c:\app\office\typertask\typertask.txt" backupFilePath="" originalFileLastModifTimestamp="1543177837" />
         </subView>
     </Session>
 </NotepadPlus>

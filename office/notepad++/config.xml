@@ -130,8 +130,6 @@
     </FindHistory>
     <FileBrowser />
     <History nbMaxFile="15" inSubMenu="no" customLength="-1">
-        <File filename="d:\jbg\project\Admin4.0\geolocalizacion\GeoIP-139_20161129\COPYRIGHT.txt" />
-        <File filename="D:\jbg\doc\error\eclipse.error" />
         <File filename="d:\jbg\doc\como\patch.como" />
         <File filename="D:\jbg\doc\como\desarrollo.como" />
         <File filename="d:\jbg\project\Admin4.0\Admin4.0.project" />
@@ -144,6 +142,8 @@
         <File filename="d:\jbg\soft\web\youtube-downloader\help.txt" />
         <File filename="D:\jbg\project\Admin4.0\test.json" />
         <File filename="C:\app\office\typertask\typertask.cmd" />
+        <File filename="C:\app\office\typertask\typertask.cmd.old" />
+        <File filename="C:\app\office\typertask\typertask.action.cmd" />
     </History>
     <ProjectPanels>
         <ProjectPanel id="0" workSpaceFile="" />
