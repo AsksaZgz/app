@@ -1,4 +1,4 @@
-iii=1811231337
+iii=1812051158
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ii*>> ID UNIQUE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
@@ -33,9 +33,9 @@ ttr=RUN: c:\app\office\typertask\typertask.action.exe restart
 --4=http://192.168.0.43:4200/#/join/67911925
 
 	
----=0{delay=200}.6{delay=200}.0 - COLLABORATE Space - RPM - Java - 1811231337
---.=debugger\; // 1811211240
---,=console.log('1811211240', '', );
+---=1{delay=200}.1{delay=200}.0 - Phone Billing - 1812051158
+--.=debugger\; // 
+--,=console.log(''{delay=200}, ''{delay=200}, );{left}{left}{left}{left}{left}{left}{left}{left}{left}
 
 
 
@@ -53,6 +53,18 @@ ttr=RUN: c:\app\office\typertask\typertask.action.exe restart
 
 ;;; CLEARONE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<cc*>> CLEARONE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccd*>> DEVELOP
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdau>> Admin path local with token of jesus.bernad@clearone.com in http://www.collaboratespace.us
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdad>> Admin path local with token of jesus.bernad@clearone.com in http://collaborate4d.spontania.net
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdh>> Portal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdpd>> SuperAdmin - Partners
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccl*>> LITERAL
+
+
+
+
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccl*>> LITERAL
 cclend=https://collaborate4{delay=200}d.spontania.net/literal/assets/i18n/en.json?cacheBusting={{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}
@@ -62,12 +74,21 @@ cclesd=https://collaborate4{delay=200}d.spontania.net/literal/assets//i18n/es.js
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccd*>> DEVELOP
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdau>> Admin path local with token of jesus.bernad@clearone.com in http://www.collaboratespace.us
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdad>> Admin path local with token of jesus.bernad@clearone.com in http://collaborate4d.spontania.net
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdh>> Portal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdpd>> SuperAdmin - Partners
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdau>> Admin path local with token of jesus.bernad@clearone.com in http://www.collaboratespace.us
 ccdau=http://192.168.0.43:4100/#/{{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}/3244875d-debe-4b15-9314-142b2b0f2461
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdad>> Admin path local with token of jesus.bernad@clearone.com in http://collaborate4d.spontania.net
-ccdad=http://192.168.0.43:4100/#/{{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}/2b30a7b6-0dfb-4e53-b564-fe80912ad5bc
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+ccdad=http://192.168.0.43:4100/#/{{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}/d1f43c50-24cc-4f1a-a7a8-30e59ffc14c8
+ccded=http://192.168.0.43:4100/#/{{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}/2b30a7b6-0dfb-4e53-b564-fe80912ad5bc
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdpd>> SuperAdmin - Partners
 ccdpd=http://192.168.0.43:4300
 ;;; 2721520b-e4df-4b4b-a9ac-de83170e5617
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdh>> Portal
+ccdh=http://192.168.0.43:4200
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccx*>> DOC & TEXT
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccxs>> Title Project
@@ -199,7 +220,7 @@ ccvpd=http://collaborate4d.spontania.net/partners/assets/version?cacheBusting={{
 --c1=O{{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}{tabs}4242424242424242{tab}{delay=100}10{delay=100}21{tab}123{tab}
 
 --x={{yy}}{{mm}}{{dd}}{{hh}}{{uu}}
---z={{yy}}{{mm}}{{dd}}{{hh}}{{uu}}@clearone.com
+--z={{yy}}{{mm}}{{dd}}{{hh}}{{uu}}@yopmail.com
 --@={{yy}}{{mm}}{{dd}}{{hh}}{{uu}}@clearone.com
 
 
@@ -321,14 +342,65 @@ __.={shiftdown}:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ss*>> Parroquia de San Antonio
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ssx*>> Textos
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ssx*>> Textos
+ssxs=Parroquia de San Antonio - Web -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<vv*>> TRAVEL
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<vvh>> Login
-vvh=https://www.travelclub.es/tienes_tarjeta.cfm
+vvh=https://www.travelclub.es/tienes_tarjeta.cfm{enter}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<vvlj>> Login Jesus
 vvlj=asksa@msn.com{tab}Tra2015!{enter}
-
-
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<vvlm>> Login Mamen
+vvlm=jbgzgz@gmail.com{tab}Tra2015!{enter}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<vvla>> Login Antonio
+vvla=jbpzgz@gmail.com{tab}Tra2015!{enter}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<vvle>> Login Esperanza
+vvle=eglzgz@outlook.es{tab}Tra2015!{enter}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<vvls>> Login Asun
+vvls=agczgz@outlook.es{tab}Tra2015!{enter}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<vvls>> Login Abuelito
+vvlb=jbvzgz@outlook.es{tab}Tra2015!{enter}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<vvls>> Login J2
+vvl2=jbgzgz@outlook.es{tab}Tra2015!{enter}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<vvls>> Login J3
+vvl3=X1808222240@zoho.eu{tab}Tra2015!{enter}
 
 
 
@@ -357,48 +429,6 @@ vvlj=asksa@msn.com{tab}Tra2015!{enter}
 
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<tt*>>TOYSRUS
-ttd=BKBNT1YWm8zy{enter}
-ttu=https://www.toysrus.es/login.jsp{enter}
-ttc=asksa@msn.com{tab}Toy2015!{enter}
-
-ttq1=98344791{enter}
-ttq2=105298721{enter}
-ttq3=55907171{enter}
-ttq4=793784{enter}
-ttq5=404408{enter}
-ttw1=105066{enter}
-ttw2=325546{enter}
-ttw3=93409411{enter}
-ttw4=97098331{enter}
-ttw5=99371551{enter}
-tte1=101487931{enter}
-tte2=021509{enter}
-tt11=103810001{enter}
-tt12=58870011{enter}
-tt13=96841481{enter}
-tt14=103811561{enter}
-tt15=59997581{enter}
-tt21=69393851{enter}
-tt22=99409641{enter}
-tt23=54292971{enter}
-tt24=44414121{enter}
-tt25=103810791{enter}
-tt31=8054211{enter}
-tt32=55907171{enter}
-tt33=58870091{enter}
-tt34=4878531{enter}
-tt35=5296521{enter}
-tt41=103190881{enter}
-tt42=102412761{enter}
-tt43=107011481{enter}
-tt44=48297871{enter}
-tt45=105928521{enter}
-tt51=103811391{enter}
-tt52=034980{enter}
-tt53=076603{enter}
-tt54=326833{enter}
-tt55=103809991{enter}
 
 
 

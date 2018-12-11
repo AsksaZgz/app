@@ -1,0 +1,19 @@
+L'autore non si assume alcuna responsabilità per danni di 
+qualsiasi tipo di file o hardware che potrebbero essere 
+causati dall'uso di questo programma. 
+L'installazione e utilizzo del software sono gratuiti 
+sia per uso privato che per uso commerciale.
+Se vuoi sostenere finanziariamente il progetto, contatta 
+direttamente l'autore del programma. 
+E' permessa la distribuzione su supporti rimuovibili del 
+programma sia per usi privati che per usi commerciali.
+E' permesso il mirroring non commerciale su altri server 
+www o ftp di scuole, università, e associazioni o 
+organizzazioni no-profit.
+Il mirroring del programma sulla home page residenziale 
+o commerciale è riapprovato. 
+L'uso e la distribuzione del programma è consentito solo 
+con l'esplicito consenso dell'autore.
+
+FFmpeg è licenziato sotto LGPL e GPL
+Codice sorgente: http://ffmpeg.org/download.html

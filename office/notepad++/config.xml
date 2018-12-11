@@ -130,20 +130,20 @@
     </FindHistory>
     <FileBrowser />
     <History nbMaxFile="15" inSubMenu="no" customLength="-1">
-        <File filename="d:\jbg\project\Admin4.0\geolocalizacion\GeoIP-139_20161129\COPYRIGHT.txt" />
-        <File filename="D:\jbg\doc\error\eclipse.error" />
-        <File filename="d:\jbg\doc\como\patch.como" />
-        <File filename="D:\jbg\doc\como\desarrollo.como" />
-        <File filename="d:\jbg\project\Admin4.0\Admin4.0.project" />
-        <File filename="d:\jbg\soft\comprimirWeb\comprimirWeb.cmd" />
-        <File filename="D:\jbg\doc\como\postgresql.como" />
-        <File filename="d:\jbg\project\Admin4.0\geolocalizacion\geo.sql" />
         <File filename="d:\jbg\doc\como\java.como" />
         <File filename="d:\jbg\doc\como\ant.como" />
         <File filename="C:\Users\ClearOne\Downloads\get.jsp" />
         <File filename="d:\jbg\soft\web\youtube-downloader\help.txt" />
         <File filename="D:\jbg\project\Admin4.0\test.json" />
         <File filename="C:\app\office\typertask\typertask.cmd" />
+        <File filename="d:\jbg\rpm\Spontania-6.spec" />
+        <File filename="C:\jbg\soft\BatToExe\settings.ini" />
+        <File filename="C:\app\office\typertask\typertask.cmd.old" />
+        <File filename="C:\app\office\typertask\typertask.action.cmd" />
+        <File filename="d:\jbg\project\Admin4.0\Admin-4.0-Dashboard.project" />
+        <File filename="d:\jbg\rpm\old\sh\spontania_setup.sh" />
+        <File filename="d:\jbg\project\sso\sso.project" />
+        <File filename="C:\jbg\soft\web\webs1.0\webs1.0.cmd" />
         <File filename="c:\app\office\typertask\typertask.txt" />
     </History>
     <ProjectPanels>
