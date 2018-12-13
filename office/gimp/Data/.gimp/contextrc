@@ -1,0 +1,15 @@
+# GIMP user context
+
+(tool "gimp-convolve-tool")
+(paint-info "gimp-convolve")
+(foreground (color-rgb 0.635294 0.654902 0.639216))
+(brush "1. Pixel")
+(dynamics "Dynamics Off")
+(mybrush "100% Opaque")
+(pattern "Pine")
+(gradient "FG to BG (RGB)")
+(palette "Color History")
+(font "Sans-serif")
+(tool-preset "Core Pointer")
+
+# end of user context

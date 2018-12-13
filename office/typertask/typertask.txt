@@ -53,6 +53,12 @@ ttr=RUN: c:\app\office\typertask\typertask.action.exe restart
 
 ;;; CLEARONE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<cc*>> CLEARONE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccc*>> CREDIT CARD
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccca>> CREDIT CARD - AMERICAN EXPRESS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<cccj>> CREDIT CARD - JCB
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<cccm>> CREDIT CARD - MASTERCARD
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<cccv>> CREDIT CARD - VISA
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccd*>> DEVELOP
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdau>> Admin path local with token of jesus.bernad@clearone.com in http://www.collaboratespace.us
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdad>> Admin path local with token of jesus.bernad@clearone.com in http://collaborate4d.spontania.net
@@ -60,6 +66,32 @@ ttr=RUN: c:\app\office\typertask\typertask.action.exe restart
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccdpd>> SuperAdmin - Partners
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccl*>> LITERAL
+
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <<ccc*>> CREDIT CARD
+cccv=4242424242424242{tab}0121{tab}123{tab}
+cccm=5555555555554444{tab}0121{tab}123{tab}
+ccca=378282246310005{tab}0121{tab}123{tab}
+cccj=3566002020360505{tab}0121{tab}123{tab}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -216,8 +248,6 @@ ccvpd=http://collaborate4d.spontania.net/partners/assets/version?cacheBusting={{
 
 
 
-;CARD
---c1=O{{yyyy}}{{mm}}{{dd}}{{hh}}{{uu}}{tabs}4242424242424242{tab}{delay=100}10{delay=100}21{tab}123{tab}
 
 --x={{yy}}{{mm}}{{dd}}{{hh}}{{uu}}
 --z={{yy}}{{mm}}{{dd}}{{hh}}{{uu}}@yopmail.com
